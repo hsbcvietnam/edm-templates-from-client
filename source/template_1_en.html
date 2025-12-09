@@ -1,0 +1,6608 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Template 1</title>
+
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				margin: 0 auto;
+				font-family: Arial, sans-serif;
+				font-size: 16px;
+				line-height: 24px;
+				width: 700px;
+				background: #f3f3f3;
+				color: #333333;
+			}
+			p {
+				font-size: 16px;
+				margin: 16px 0;
+			}
+			/* Common */
+			.button {
+				background: #db0011;
+				padding: 9px 20px 11px 20px;
+				display: inline-block;
+				color: white;
+				cursor: pointer;
+				font-weight: bold;
+			}
+
+			.title_box {
+				font-size: 23px;
+				line-height: 30px;
+			}
+
+			.title_box_red {
+				font-size: 23px;
+				line-height: 30px;
+				color: #db0011;
+			}
+
+			.title_item {
+				font-size: 19px;
+				line-height: 27px;
+			}
+
+			.hide-on-desktop {
+				display: none !important;
+				max-height: 0 !important;
+				overflow: hidden !important;
+			}
+
+			/* Body content */
+			.body_content {
+				border: 1px solid #d7d8d6;
+				background: #ffffff;
+				width: 700px;
+			}
+
+			/* Hero */
+			.hero_logo {
+				padding: 32px 45px;
+			}
+
+			/* Tạo padding */
+			.main_body {
+				padding: 32px 45px;
+			}
+			/* Part 2 */
+			.part_2_image_content {
+				margin: 0;
+				padding: 0;
+				border: none;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 16px;
+				line-height: 1.3;
+				color: #000000;
+			}
+
+			.part_2_text_content {
+				margin: 0;
+				padding: 0;
+				border: none;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 16px;
+				line-height: 1.3;
+				color: #db0011;
+			}
+
+			.part_2_column_bg {
+				background-color: #f1f1f1;
+				margin: 0;
+				padding: 0;
+				border-radius: 5px 5px 0 0;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 16px;
+				line-height: 1.3;
+				color: #000000;
+			}
+
+			.part_2_column_content {
+				margin: 0;
+				padding: 10px 0 10px 0;
+				border-bottom: 1px solid #000000;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 16px;
+				line-height: 1.3;
+				color: #000000;
+			}
+
+			.part_2_btn_column_bg {
+				background-color: #f1f1f1;
+				margin: 0;
+				padding: 0;
+				border-radius: 0 0 5px 5px;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 16px;
+				line-height: 1.3;
+				color: #000000;
+			}
+
+			.part_2_btn_bg {
+				background-color: #db0011;
+				margin: 0;
+				padding: 10px;
+				border: none;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 16px;
+				line-height: 1.3;
+				color: #ffffff;
+			}
+
+			.part_2_btn_content {
+				color: #ffffff !important;
+				text-decoration: none !important;
+			}
+
+			/* Part 3 */
+			.part_3_content_border {
+				margin: 0;
+				padding: 20px 0;
+				border: 1px solid #000000;
+				border-radius: 5px;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 16px;
+				line-height: 1.3;
+			}
+
+			.part_3_content_image {
+				margin: 0 !important;
+				padding: 0;
+				border: none;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 16px;
+				line-height: 1.3;
+			}
+			.part_3_content_text {
+				margin: 0;
+				padding: 0 15px !important;
+				border: none;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 16px;
+				line-height: 1.3;
+			}
+
+			/* Part 4 */
+			.part_4_content_bg {
+				background-color: #ffffff;
+				margin: 0;
+				padding: 15px;
+				border-radius: 5px;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 16px;
+				line-height: 1.3;
+			}
+
+			.part_4_content_text {
+				margin: 0;
+				padding: 0;
+				border: none;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 16px;
+				line-height: 1.3;
+			}
+			.part_4_btn_bg {
+				background-color: #db0011;
+				margin: 0;
+				padding: 10px 0;
+				border: none;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 16px;
+				line-height: 1.3;
+				color: #ffffff;
+			}
+
+			.part_4_btn_content {
+				color: #ffffff;
+				text-decoration: none;
+			}
+			/* Footer */
+			footer {
+				background-color: #e4e8eb;
+			}
+
+			.footer-container {
+				font-size: 16px;
+				line-height: 1.3;
+				color: #000000;
+				background-color: #ededed;
+			}
+
+			.footer-container-main {
+				padding: 16px 0 !important;
+			}
+
+			.content_text_footer {
+				margin: 0;
+				padding: 10px 0 0 0;
+				border: none;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 12px;
+				line-height: 16px;
+				color: #808080;
+			}
+
+			.footer_container {
+				padding: 32px 45px;
+			}
+
+			/* Dark mode */
+			@media (prefers-color-scheme: dark) {
+				body {
+					background: #101010 !important;
+				}
+
+				.body_content {
+					color: #ffffff !important;
+					background: #212121 !important;
+					border: 1px solid #767676 !important;
+				}
+
+				.main_content {
+					color: #ffffff !important;
+					background-color: #333333 !important;
+				}
+				/* Part 2 */
+				.part_2_column_bg {
+					background-color: #333333 !important;
+					color: #ffffff !important;
+				}
+
+				.part_2_column_content {
+					border-bottom: 1px solid #ffffff !important;
+				}
+				.part_2_btn_column_bg {
+					background-color: #333333 !important;
+					color: #ffffff !important;
+				}
+				/* Part 3 */
+				.part_3_content_border {
+					border: 1px solid #ffffff !important;
+				}
+				.box_content {
+					color: #ffffff !important;
+					background: #212121 !important;
+				}
+
+				.footer-container {
+					background-color: #1d1d1d !important;
+					color: #ffffff !important;
+				}
+
+				.footer_container {
+					background: #333333 !important;
+					color: #ffffff !important;
+				}
+
+				.footer-social {
+					color: #ffffff !important;
+				}
+			}
+
+			/* Mobile */
+			@media (max-width: 768px) {
+				body {
+					width: 100%;
+					background: none !important;
+					padding: 16px;
+				}
+
+				.body_content {
+					border: 1px solid #d7d8d6;
+					width: 100% !important;
+				}
+
+				/* Hero */
+				.hero_logo {
+					padding: 32px 22px;
+				}
+
+				/* Tạo padding */
+				.main_body {
+					padding: 16px 22px 32px 22px;
+				}
+
+				/* Common */
+				.button {
+					width: 100% !important;
+					display: table;
+				}
+
+				.hide-on-mobile {
+					display: none !important;
+					max-height: 0 !important;
+					overflow: hidden !important;
+				}
+
+				.hide-on-desktop {
+					display: table !important;
+				}
+
+				/* Content */
+				.item {
+					display: block;
+				}
+
+				/* Part 1 */
+				.stack-column-part1 {
+					display: block !important;
+					width: 100% !important;
+					max-width: 100% !important;
+				}
+
+				/* footer */
+				.footer-container-main {
+					padding: 0 32px !important;
+				}
+
+				.stack-column-top {
+					display: block !important;
+					width: 100% !important;
+					max-width: 100% !important;
+					padding: 16px 0 !important;
+					font-size: 14px !important;
+					margin: 0 auto !important;
+				}
+
+				.text-align-center {
+					text-align: center !important;
+				}
+
+				.stack-column-bottom {
+					display: block !important;
+					width: 100% !important;
+					max-width: 100% !important;
+					text-align: center;
+					border-top: 2px solid #db0011;
+					padding: 16px 0 !important;
+					font-size: 14px !important;
+				}
+
+				.footer_container {
+					padding: 16px 22px !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Pre-header -->
+		<div
+			style="
+				display: none;
+				font-size: 1px;
+				color: #ffffff;
+				line-height: 1px;
+				max-height: 0px;
+				max-width: 0px;
+				opacity: 0;
+				overflow: hidden;
+			"
+		>
+			Chúng tôi có ưu đãi đặc biệt dành cho bạn hôm nay...
+		</div>
+		<!-- Body content -->
+
+		<table
+			class="body_content"
+			border="0"
+			cellpadding="0"
+			cellspacing="0"
+			align="center"
+		>
+			<tr>
+				<td>
+					<!-- Hero -->
+					<div class="hero">
+						<table
+							width="100%"
+							cellpadding="0"
+							cellspacing="0"
+							border="0"
+							class="hero_logo"
+						>
+							<tr>
+								<td align="left" valign="bottom">
+									<img
+										src="image/chs_hsbc_logo.jpg"
+										width="104"
+										height="28"
+										alt=""
+										style="display: block"
+									/>
+								</td>
+								<td align="right" valign="bottom">
+									<img
+										src="image/chs_hsbc_cards.jpg"
+										height="50"
+										alt=""
+										style="display: block"
+									/>
+								</td>
+							</tr>
+						</table>
+						<img
+							src="image/chs_hsbc_key.jpg.jpg"
+							height="auto"
+							alt=""
+							width="100%"
+						/>
+					</div>
+					<!-- Bọc padding -->
+					<table>
+						<tr>
+							<td class="main_body">
+								<!-- Intro -->
+								<div class="intro">
+									<b style="font-size: 33px; line-height: 40px"
+										>Lorem ipsum dolor sit amet</b
+									>
+									<p>Kính gửi Quý khách hàng &lt; Name&gt;</p>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit. Aliquam vitae urna euismod, viverra justo
+										at, ullamcorper odio.
+									</p>
+
+									<!-- button -->
+									<table>
+										<td height="16"></td>
+									</table>
+									<table
+										role="presentation"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										style="text-align: center"
+										class="button"
+									>
+										<tr>
+											<td bgcolor="#db0011">TÌM HIỂU THÊM</td>
+										</tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+					</table>
+
+					<!-- Bọc padding -->
+					<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td
+								class="main_body main_content"
+								style="background: rgb(231, 231, 231)"
+							>
+								<!-- part 1 -->
+								<div class="intro">
+									<b class="title_box_red"
+										>Lorem ipsum dolor sit amet</b
+									>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit. Aliquam vitae urna euismod, viverra justo
+										at, ullamcorper odio.
+									</p>
+
+									<!-- Image and content -->
+									<table
+										width="100%"
+										cellpadding="0"
+										cellspacing="0"
+										border="0"
+										role="presentation"
+										style="border-collapse: collapse"
+									>
+										<tr>
+											<!-- Image Column -->
+											<td
+												class="stack-column-part1"
+												width="50%"
+												valign="top"
+												style="padding: 0; vertical-align: top"
+											>
+												<img
+													src="image/chs_box_2.png"
+													alt="Example Image"
+													width="100%"
+													style="
+														display: block;
+														max-width: 100%;
+														height: auto;
+													"
+													border="0"
+												/>
+											</td>
+
+											<!-- Spacer (20px) -->
+											<td
+												class="hide-on-mobile"
+												width="20"
+												style="font-size: 0; line-height: 0"
+											>
+												&nbsp;
+											</td>
+
+											<!-- Khoảng trắng -->
+											<td
+												height="16"
+												style="line-height: 16px; font-size: 0"
+												class="hide-on-desktop"
+											>
+												&nbsp;
+											</td>
+
+											<!-- Text Column -->
+											<td
+												class="stack-column-part1"
+												width="50%"
+												valign="top"
+												style="padding: 0; vertical-align: top"
+											>
+												<table
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													role="presentation"
+													style="border-collapse: collapse"
+												>
+													<tr>
+														<td
+															style="
+																padding-left: 20px;
+																font-family: Arial,
+																	sans-serif;
+																font-size: 16px;
+																line-height: 24px;
+															"
+														>
+															<!-- Item 1 -->
+															<table
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																role="presentation"
+																style="
+																	border-collapse: collapse;
+																"
+															>
+																<tr>
+																	<td
+																		valign="top"
+																		style="
+																			padding-right: 16px;
+																		"
+																	>
+																		•
+																	</td>
+																	<td
+																		style="
+																			padding-bottom: 16px;
+																		"
+																	>
+																		<p
+																			style="
+																				margin: 0;
+																			"
+																		>
+																			Lorem ipsum
+																			dolor sit
+																			amet,
+																			consectetur
+																			adipiscing
+																			elit.
+																		</p>
+																	</td>
+																</tr>
+															</table>
+
+															<!-- Item 2 -->
+															<table
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																role="presentation"
+																style="
+																	border-collapse: collapse;
+																"
+															>
+																<tr>
+																	<td
+																		valign="top"
+																		style="
+																			padding-right: 16px;
+																		"
+																	>
+																		•
+																	</td>
+																	<td
+																		style="
+																			padding-bottom: 16px;
+																		"
+																	>
+																		<p
+																			style="
+																				margin: 0;
+																			"
+																		>
+																			Lorem ipsum
+																			dolor sit
+																			amet,
+																			consectetur
+																			adipiscing
+																			elit.
+																		</p>
+																	</td>
+																</tr>
+															</table>
+
+															<!-- Item 3 -->
+															<table
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																role="presentation"
+																style="
+																	border-collapse: collapse;
+																"
+															>
+																<tr>
+																	<td
+																		valign="top"
+																		style="
+																			padding-right: 16px;
+																		"
+																	>
+																		•
+																	</td>
+																	<td
+																		style="
+																			padding-bottom: 16px;
+																		"
+																	>
+																		<p
+																			style="
+																				margin: 0;
+																			"
+																		>
+																			Lorem ipsum
+																			dolor sit
+																			amet,
+																			consectetur
+																			adipiscing
+																			elit.
+																		</p>
+																	</td>
+																</tr>
+															</table>
+
+															<!-- Item 4 -->
+															<table
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																role="presentation"
+																style="
+																	border-collapse: collapse;
+																"
+															>
+																<tr>
+																	<td
+																		valign="top"
+																		style="
+																			padding-right: 16px;
+																		"
+																	>
+																		•
+																	</td>
+																	<td>
+																		<p
+																			style="
+																				margin: 0;
+																			"
+																		>
+																			Lorem ipsum
+																			dolor sit
+																			amet,
+																			consectetur
+																			adipiscing
+																			elit.
+																		</p>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+
+									<!-- Khoảng trắng -->
+									<table
+										width="100%"
+										cellpadding="0"
+										cellspacing="0"
+										border="0"
+										role="presentation"
+									>
+										<tr>
+											<td
+												height="16"
+												style="line-height: 16px; font-size: 0"
+											>
+												&nbsp;
+											</td>
+										</tr>
+									</table>
+
+									<!-- button -->
+									<table>
+										<td height="16"></td>
+									</table>
+									<table
+										role="presentation"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										style="text-align: center"
+										class="button"
+									>
+										<tr>
+											<td bgcolor="#db0011">TÌM HIỂU THÊM</td>
+										</tr>
+									</table>
+								</div>
+
+								<!-- Line -->
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									role="presentation"
+									style="border-collapse: collapse"
+								>
+									<!-- Phần trên: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-bottom: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần Line: 1px duy nhất -->
+									<tr>
+										<td
+											height="1"
+											style="
+												background-color: #d7d8d6;
+												line-height: 1px;
+												font-size: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần dưới: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-top: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+
+								<!-- part 2 -->
+								<div class="intro">
+									<b class="title_box_red"
+										>Lorem ipsum dolor sit amet Part 2</b
+									>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit. Aliquam vitae urna euismod, viverra justo
+										at, ullamcorper odio.
+									</p>
+
+									<!-- Card background: white -->
+									<!-- card desktop -->
+									<div class="hide-on-mobile" style="width: 100%">
+										<table
+											width="100%"
+											cellpadding="0"
+											cellspacing="0"
+											border="0"
+											role="presentation"
+										>
+											<tr>
+												<td
+													class="box_content"
+													bgcolor="#FFFFFF"
+													style="
+														margin: 0;
+														padding: 15px;
+														border-radius: 5px;
+														font-family: Arial, Helvetica,
+															sans-serif !important;
+														font-size: 16px;
+														line-height: 1.3;
+														color: #000000;
+													"
+												>
+													<table
+														width="100%"
+														border="0"
+														cellpadding="0"
+														cellspacing="0"
+														class="chs_body"
+													>
+														<!--2 hangf dau-->
+														<tr>
+															<td
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																&nbsp;
+															</td>
+															<td
+																width="132"
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="129"
+																			align="center"
+																			valign="top"
+																			bgcolor="#db0011"
+																			style="
+																				margin: 0;
+																				padding: 10px
+																					0 10px
+																					0;
+																				border-radius: 5px
+																					5px 0
+																					0;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #ffffff;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td
+																width="132"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="129"
+																			align="center"
+																			valign="top"
+																			bgcolor="#db0011"
+																			style="
+																				margin: 0;
+																				padding: 10px
+																					0 10px
+																					0;
+																				border-radius: 5px
+																					5px 0
+																					0;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #ffffff;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td
+																width="129"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="129"
+																			align="center"
+																			valign="top"
+																			bgcolor="#db0011"
+																			style="
+																				margin: 0;
+																				padding: 10px
+																					0 10px
+																					0;
+																				border-radius: 5px
+																					5px 0
+																					0;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #ffffff;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0 0 5px 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																&nbsp;
+															</td>
+															<td
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0 0 5px 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<img
+																	src="image/chs_box_3.jpg"
+																	width="129"
+																	height="auto"
+																	alt=""
+																	style="display: block"
+																/>
+															</td>
+															<td
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0 0 5px 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<img
+																	src="image/chs_box_3.jpg"
+																	width="129"
+																	height="auto"
+																	alt=""
+																	style="display: block"
+																/>
+															</td>
+															<td
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0 0 5px 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<img
+																	src="image/chs_box_3.jpg"
+																	width="129"
+																	height="auto"
+																	alt=""
+																	style="display: block"
+																/>
+															</td>
+														</tr>
+														<!-- Noi dung -->
+														<tr>
+															<td valign="middle">
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_image_content"
+																			width="42"
+																			align="left"
+																			valign="middle"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			class="part_2_text_content"
+																			valign="middle"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td valign="middle">
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_image_content"
+																			width="42"
+																			align="left"
+																			valign="middle"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			class="part_2_text_content"
+																			valign="middle"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td valign="middle">
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_image_content"
+																			width="42"
+																			align="left"
+																			valign="middle"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			class="part_2_text_content"
+																			valign="middle"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td valign="middle">
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_image_content"
+																			width="42"
+																			align="left"
+																			valign="middle"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			class="part_2_text_content"
+																			valign="middle"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td valign="middle">
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_image_content"
+																			width="42"
+																			align="left"
+																			valign="middle"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			class="part_2_text_content"
+																			valign="middle"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td valign="middle">
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_image_content"
+																			width="42"
+																			align="left"
+																			valign="middle"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			class="part_2_text_content"
+																			valign="middle"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="bottom"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<!-- Button -->
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																&nbsp;
+															</td>
+															<td
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_btn_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						width="110"
+																						align="left"
+																						valign="top"
+																						style="
+																							margin: 0;
+																							padding: 20px
+																								0
+																								20px
+																								0;
+																							border: none;
+																							font-family: Arial,
+																								Helvetica,
+																								sans-serif !important;
+																							font-size: 16px;
+																							line-height: 1.3;
+																							color: #000000;
+																						"
+																					>
+																						<table
+																							width="100%"
+																							border="0"
+																							cellpadding="0"
+																							cellspacing="0"
+																							class="chs_body"
+																						>
+																							<tr>
+																								<td
+																									class="part_2_btn_bg"
+																									align="center"
+																									valign="top"
+																								>
+																									<a
+																										class="part_2_btn_content"
+																										href="#"
+																										target="_blank"
+																										><strong
+																											>TÌM
+																											HIỂU
+																											THÊM</strong
+																										></a
+																									>
+																								</td>
+																							</tr>
+																						</table>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_btn_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						width="110"
+																						align="left"
+																						valign="top"
+																						style="
+																							margin: 0;
+																							padding: 20px
+																								0
+																								20px
+																								0;
+																							border: none;
+																							font-family: Arial,
+																								Helvetica,
+																								sans-serif !important;
+																							font-size: 16px;
+																							line-height: 1.3;
+																							color: #000000;
+																						"
+																					>
+																						<table
+																							width="100%"
+																							border="0"
+																							cellpadding="0"
+																							cellspacing="0"
+																							class="chs_body"
+																						>
+																							<tr>
+																								<td
+																									class="part_2_btn_bg"
+																									align="center"
+																									valign="top"
+																								>
+																									<a
+																										class="part_2_btn_content"
+																										href="#"
+																										target="_blank"
+																										><strong
+																											>TÌM
+																											HIỂU
+																											THÊM</strong
+																										></a
+																									>
+																								</td>
+																							</tr>
+																						</table>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_btn_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						width="110"
+																						align="left"
+																						valign="top"
+																						style="
+																							margin: 0;
+																							padding: 20px
+																								0
+																								20px
+																								0;
+																							border: none;
+																							font-family: Arial,
+																								Helvetica,
+																								sans-serif !important;
+																							font-size: 16px;
+																							line-height: 1.3;
+																							color: #000000;
+																						"
+																					>
+																						<table
+																							width="100%"
+																							border="0"
+																							cellpadding="0"
+																							cellspacing="0"
+																							class="chs_body"
+																						>
+																							<tr>
+																								<td
+																									class="part_2_btn_bg"
+																									align="center"
+																									valign="top"
+																								>
+																									<a
+																										class="part_2_btn_content"
+																										href="#"
+																										target="_blank"
+																										><strong
+																											>TÌM
+																											HIỂU
+																											THÊM</strong
+																										></a
+																									>
+																								</td>
+																							</tr>
+																						</table>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</div>
+
+									<!-- card mobile -->
+									<!--[if !mso]><!-- -->
+									<div class="hide-on-desktop" style="width: 100%">
+										<table
+											width="100%"
+											cellpadding="0"
+											cellspacing="0"
+											border="0"
+											role="presentation"
+										>
+											<tr>
+												<td
+													class="box_content"
+													bgcolor="#FFFFFF"
+													style="
+														margin: 0;
+														padding: 15px;
+														border-radius: 5px;
+														font-family: Arial, Helvetica,
+															sans-serif !important;
+														font-size: 16px;
+														line-height: 1.3;
+														color: #000000;
+													"
+												>
+													<!-- Cụm 1 -->
+													<table
+														width="100%"
+														border="0"
+														cellpadding="0"
+														cellspacing="0"
+														class="chs_body"
+													>
+														<tr>
+															<td
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																&nbsp;
+															</td>
+															<td
+																width="132"
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="129"
+																			align="center"
+																			valign="top"
+																			bgcolor="#db0011"
+																			style="
+																				margin: 0;
+																				padding: 10px
+																					0 10px
+																					0;
+																				border-radius: 5px
+																					5px 0
+																					0;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #ffffff;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0 0 5px 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																&nbsp;
+															</td>
+															<td
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0 0 5px 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<img
+																	src="image/chs_box_3.jpg"
+																	width="129"
+																	height="auto"
+																	alt=""
+																	style="display: block"
+																/>
+															</td>
+														</tr>
+														<!-- Giống nhau -->
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+
+														<!-- Button -->
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																&nbsp;
+															</td>
+															<td
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_btn_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						width="110"
+																						align="left"
+																						valign="top"
+																						style="
+																							margin: 0;
+																							padding: 20px
+																								0
+																								20px
+																								0;
+																							border: none;
+																							font-family: Arial,
+																								Helvetica,
+																								sans-serif !important;
+																							font-size: 16px;
+																							line-height: 1.3;
+																							color: #000000;
+																						"
+																					>
+																						<table
+																							width="100%"
+																							border="0"
+																							cellpadding="0"
+																							cellspacing="0"
+																							class="chs_body"
+																						>
+																							<tr>
+																								<td
+																									class="part_2_btn_bg"
+																									align="center"
+																									valign="top"
+																								>
+																									<a
+																										class="part_2_btn_content"
+																										href="#"
+																										target="_blank"
+																										><strong
+																											>TÌM
+																											HIỂU
+																											THÊM</strong
+																										></a
+																									>
+																								</td>
+																							</tr>
+																						</table>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td
+													class="box_content"
+													bgcolor="#FFFFFF"
+													style="
+														margin: 0;
+														padding: 15px;
+														border-radius: 5px;
+														font-family: Arial, Helvetica,
+															sans-serif !important;
+														font-size: 16px;
+														line-height: 1.3;
+														color: #000000;
+													"
+												>
+													<!-- Cụm 1 -->
+													<table
+														width="100%"
+														border="0"
+														cellpadding="0"
+														cellspacing="0"
+														class="chs_body"
+													>
+														<tr>
+															<td
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																&nbsp;
+															</td>
+															<td
+																width="132"
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="129"
+																			align="center"
+																			valign="top"
+																			bgcolor="#db0011"
+																			style="
+																				margin: 0;
+																				padding: 10px
+																					0 10px
+																					0;
+																				border-radius: 5px
+																					5px 0
+																					0;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #ffffff;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0 0 5px 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																&nbsp;
+															</td>
+															<td
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0 0 5px 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<img
+																	src="image/chs_box_3.jpg"
+																	width="129"
+																	height="auto"
+																	alt=""
+																	style="display: block"
+																/>
+															</td>
+														</tr>
+														<!-- Giống nhau -->
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+
+														<!-- Button -->
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																&nbsp;
+															</td>
+															<td
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_btn_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						width="110"
+																						align="left"
+																						valign="top"
+																						style="
+																							margin: 0;
+																							padding: 20px
+																								0
+																								20px
+																								0;
+																							border: none;
+																							font-family: Arial,
+																								Helvetica,
+																								sans-serif !important;
+																							font-size: 16px;
+																							line-height: 1.3;
+																							color: #000000;
+																						"
+																					>
+																						<table
+																							width="100%"
+																							border="0"
+																							cellpadding="0"
+																							cellspacing="0"
+																							class="chs_body"
+																						>
+																							<tr>
+																								<td
+																									class="part_2_btn_bg"
+																									align="center"
+																									valign="top"
+																								>
+																									<a
+																										class="part_2_btn_content"
+																										href="#"
+																										target="_blank"
+																										><strong
+																											>TÌM
+																											HIỂU
+																											THÊM</strong
+																										></a
+																									>
+																								</td>
+																							</tr>
+																						</table>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td
+													class="box_content"
+													bgcolor="#FFFFFF"
+													style="
+														margin: 0;
+														padding: 15px;
+														border-radius: 5px;
+														font-family: Arial, Helvetica,
+															sans-serif !important;
+														font-size: 16px;
+														line-height: 1.3;
+														color: #000000;
+													"
+												>
+													<!-- Cụm 1 -->
+													<table
+														width="100%"
+														border="0"
+														cellpadding="0"
+														cellspacing="0"
+														class="chs_body"
+													>
+														<tr>
+															<td
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																&nbsp;
+															</td>
+															<td
+																width="132"
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="129"
+																			align="center"
+																			valign="top"
+																			bgcolor="#db0011"
+																			style="
+																				margin: 0;
+																				padding: 10px
+																					0 10px
+																					0;
+																				border-radius: 5px
+																					5px 0
+																					0;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #ffffff;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0 0 5px 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																&nbsp;
+															</td>
+															<td
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0 0 5px 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<img
+																	src="image/chs_box_3.jpg"
+																	width="129"
+																	height="auto"
+																	alt=""
+																	style="display: block"
+																/>
+															</td>
+														</tr>
+														<!-- Giống nhau -->
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	width="100%"
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			width="42"
+																			align="left"
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #000000;
+																			"
+																		>
+																			<img
+																				src="image/chs_box_1.png"
+																				width="32"
+																				height="auto"
+																				alt=""
+																				style="
+																					display: block;
+																				"
+																			/>
+																		</td>
+																		<td
+																			valign="middle"
+																			style="
+																				margin: 0;
+																				padding: 0;
+																				border: none;
+																				font-family: Arial,
+																					Helvetica,
+																					sans-serif !important;
+																				font-size: 16px;
+																				line-height: 1.3;
+																				color: #db0011;
+																			"
+																		>
+																			<strong
+																				>Lorem
+																				ipsum</strong
+																			>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" valign="top">
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						class="part_2_column_content"
+																						width="110"
+																						align="left"
+																						valign="top"
+																					>
+																						&nbsp;
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+
+														<!-- Button -->
+														<tr>
+															<td
+																valign="middle"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																&nbsp;
+															</td>
+															<td
+																align="left"
+																valign="top"
+																style="
+																	margin: 0;
+																	padding: 0;
+																	border: none;
+																	font-family: Arial,
+																		Helvetica,
+																		sans-serif !important;
+																	font-size: 16px;
+																	line-height: 1.3;
+																	color: #000000;
+																"
+															>
+																<table
+																	border="0"
+																	cellpadding="0"
+																	cellspacing="0"
+																	class="chs_body"
+																>
+																	<tr>
+																		<td
+																			class="part_2_btn_column_bg"
+																			width="129"
+																			align="center"
+																			valign="top"
+																		>
+																			<table
+																				border="0"
+																				cellpadding="0"
+																				cellspacing="0"
+																				class="chs_body"
+																			>
+																				<tr>
+																					<td
+																						width="110"
+																						align="left"
+																						valign="top"
+																						style="
+																							margin: 0;
+																							padding: 20px
+																								0
+																								20px
+																								0;
+																							border: none;
+																							font-family: Arial,
+																								Helvetica,
+																								sans-serif !important;
+																							font-size: 16px;
+																							line-height: 1.3;
+																							color: #000000;
+																						"
+																					>
+																						<table
+																							width="100%"
+																							border="0"
+																							cellpadding="0"
+																							cellspacing="0"
+																							class="chs_body"
+																						>
+																							<tr>
+																								<td
+																									class="part_2_btn_bg"
+																									align="center"
+																									valign="top"
+																								>
+																									<a
+																										class="part_2_btn_content"
+																										href="#"
+																										target="_blank"
+																										><strong
+																											>TÌM
+																											HIỂU
+																											THÊM</strong
+																										></a
+																									>
+																								</td>
+																							</tr>
+																						</table>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<!--<![endif]-->
+								</div>
+
+								<!-- Line -->
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									role="presentation"
+									style="border-collapse: collapse"
+								>
+									<!-- Phần trên: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-bottom: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần Line: 1px duy nhất -->
+									<tr>
+										<td
+											height="1"
+											style="
+												background-color: #d7d8d6;
+												line-height: 1px;
+												font-size: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần dưới: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-top: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+
+								<!-- Part 3 -->
+								<div class="intro">
+									<table
+										width="100%"
+										cellpadding="0"
+										cellspacing="0"
+										border="0"
+										role="presentation"
+									>
+										<tr>
+											<td>
+												<img
+													src="image/chs_hsbc_key.jpg"
+													width="100%"
+													height="auto"
+													alt=""
+													style="display: block"
+												/>
+											</td>
+										</tr>
+									</table>
+
+									<table
+										width="100%"
+										cellpadding="0"
+										cellspacing="0"
+										border="0"
+										role="presentation"
+									>
+										<tr>
+											<td
+												class="box_content"
+												bgcolor="#FFFFFF"
+												style="
+													margin: 0;
+													padding: 15px;
+													border-radius: 0 0 5px 5px;
+													border-left: 1px solid #000000;
+													border-right: 1px solid #000000;
+													border-bottom: 1px solid #000000;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<b class="title_box_red"
+													>Lorem ipsum dolor sit amet Part 3</b
+												>
+												<p>
+													Lorem ipsum dolor sit amet,
+													consectetur adipiscing elit. Aliquam
+													vitae urna euismod, viverra justo at,
+													ullamcorper odio.
+												</p>
+
+												<table
+													width="100%"
+													cellpadding="0"
+													cellspacing="0"
+													border="0"
+													role="presentation"
+												>
+													<!-- Giống nhau -->
+													<tr>
+														<td class="part_3_content_border">
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																class="chs_body"
+															>
+																<tr>
+																	<td
+																		class="part_3_content_image stack-column-top"
+																		width="75"
+																		align="center"
+																		valign="middle"
+																	>
+																		<img
+																			src="image/chs_box_5.png"
+																			width="58"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: block;
+																			"
+																		/>
+																	</td>
+																	<td
+																		class="part_3_content_text stack-column-top text-align-center"
+																		valign="middle"
+																	>
+																		Vestibulum
+																		faucibus elit
+																		vitae tellus
+																		maximus, vel
+																		ornare mauris
+																		tempus. Quisque
+																		nunc nunc, sodales
+																		et mattis ut, pre
+																		1
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td height="8">&nbsp;</td>
+													</tr>
+													<tr>
+														<td class="part_3_content_border">
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																class="chs_body"
+															>
+																<tr>
+																	<td
+																		class="part_3_content_image stack-column-top"
+																		width="75"
+																		align="center"
+																		valign="middle"
+																	>
+																		<img
+																			src="image/chs_box_5.png"
+																			width="58"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: block;
+																			"
+																		/>
+																	</td>
+																	<td
+																		class="part_3_content_text stack-column-top text-align-center"
+																		valign="middle"
+																	>
+																		Vestibulum
+																		faucibus elit
+																		vitae tellus
+																		maximus, vel
+																		ornare mauris
+																		tempus. Quisque
+																		nunc nunc, sodales
+																		et mattis ut, pre
+																		2
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td height="8">&nbsp;</td>
+													</tr>
+													<tr>
+														<td class="part_3_content_border">
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																class="chs_body"
+															>
+																<tr>
+																	<td
+																		class="part_3_content_image stack-column-top"
+																		width="75"
+																		align="center"
+																		valign="middle"
+																	>
+																		<img
+																			src="image/chs_box_5.png"
+																			width="58"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: block;
+																			"
+																		/>
+																	</td>
+																	<td
+																		class="part_3_content_text stack-column-top text-align-center"
+																		valign="middle"
+																	>
+																		Vestibulum
+																		faucibus elit
+																		vitae tellus
+																		maximus, vel
+																		ornare mauris
+																		tempus. Quisque
+																		nunc nunc, sodales
+																		et mattis ut, pre
+																		3
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td height="8">&nbsp;</td>
+													</tr>
+													<tr>
+														<td class="part_3_content_border">
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																class="chs_body"
+															>
+																<tr>
+																	<td
+																		class="part_3_content_image stack-column-top"
+																		width="75"
+																		align="center"
+																		valign="middle"
+																	>
+																		<img
+																			src="image/chs_box_5.png"
+																			width="58"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: block;
+																			"
+																		/>
+																	</td>
+																	<td
+																		class="part_3_content_text stack-column-top text-align-center"
+																		valign="middle"
+																	>
+																		Vestibulum
+																		faucibus elit
+																		vitae tellus
+																		maximus, vel
+																		ornare mauris
+																		tempus. Quisque
+																		nunc nunc, sodales
+																		et mattis ut, pre
+																		4
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+									<table
+										width="100%"
+										cellpadding="0"
+										cellspacing="0"
+										border="0"
+										role="presentation"
+									>
+										<tr>
+											<td height="16">&nbsp;</td>
+										</tr>
+									</table>
+									<table
+										role="presentation"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										style="text-align: center"
+										class="button"
+									>
+										<tr>
+											<td bgcolor="#db0011">TÌM HIỂU THÊM</td>
+										</tr>
+									</table>
+								</div>
+
+								<!-- Line -->
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									role="presentation"
+									style="border-collapse: collapse"
+								>
+									<!-- Phần trên: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-bottom: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần Line: 1px duy nhất -->
+									<tr>
+										<td
+											height="1"
+											style="
+												background-color: #d7d8d6;
+												line-height: 1px;
+												font-size: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần dưới: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-top: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+
+								<!-- Part 4 -->
+								<div class="intro">
+									<b class="title_box_red"
+										>Lorem ipsum dolor sit amet Part 4</b
+									>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit. Aliquam vitae urna euismod, viverra justo
+										at, ullamcorper odio.
+									</p>
+									<!-- Card Desktop -->
+									<table
+										width="100%"
+										cellpadding="0"
+										cellspacing="0"
+										border="0"
+										role="presentation"
+										class="hide-on-mobile"
+									>
+										<tr>
+											<td
+												width="156"
+												align="left"
+												valign="top"
+												style="
+													margin: 0;
+													padding: 0 0 5px 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="chs_body"
+												>
+													<tr>
+														<td
+															width="151"
+															align="center"
+															valign="top"
+															style="
+																margin: 0;
+																padding: 0;
+																border: none;
+																font-family: Arial,
+																	Helvetica, sans-serif !important;
+																font-size: 16px;
+																line-height: 1.3;
+																color: #ffffff;
+															"
+														>
+															<img
+																src="image/chs_box_6.jpg"
+																width="151"
+																height="auto"
+																alt=""
+																style="display: block"
+															/>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td
+												width="156"
+												align="left"
+												valign="top"
+												style="
+													margin: 0;
+													padding: 0 0 5px 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="chs_body"
+												>
+													<tr>
+														<td
+															width="151"
+															align="center"
+															valign="top"
+															style="
+																margin: 0;
+																padding: 0;
+																border: none;
+																font-family: Arial,
+																	Helvetica, sans-serif !important;
+																font-size: 16px;
+																line-height: 1.3;
+																color: #ffffff;
+															"
+														>
+															<img
+																src="image/chs_box_6.jpg"
+																width="151"
+																height="auto"
+																alt=""
+																style="display: block"
+															/>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td
+												width="156"
+												align="left"
+												valign="top"
+												style="
+													margin: 0;
+													padding: 0 0 5px 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="chs_body"
+												>
+													<tr>
+														<td
+															width="151"
+															align="center"
+															valign="top"
+															style="
+																margin: 0;
+																padding: 0;
+																border: none;
+																font-family: Arial,
+																	Helvetica, sans-serif !important;
+																font-size: 16px;
+																line-height: 1.3;
+																color: #ffffff;
+															"
+														>
+															<img
+																src="image/chs_box_6.jpg"
+																width="151"
+																height="auto"
+																alt=""
+																style="display: block"
+															/>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td
+												align="left"
+												valign="top"
+												style="
+													margin: 0;
+													padding: 0 0 5px 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="chs_body"
+												>
+													<tr>
+														<td
+															width="151"
+															align="center"
+															valign="top"
+															style="
+																margin: 0;
+																padding: 0;
+																border: none;
+																font-family: Arial,
+																	Helvetica, sans-serif !important;
+																font-size: 16px;
+																line-height: 1.3;
+																color: #ffffff;
+															"
+														>
+															<img
+																src="image/chs_box_6.jpg"
+																width="151"
+																height="auto"
+																alt=""
+																style="display: block"
+															/>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td
+												align="left"
+												valign="top"
+												style="
+													margin: 0;
+													padding: 0 0 15px 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="chs_body"
+												>
+													<tr>
+														<td
+															width="151"
+															align="center"
+															valign="top"
+															style="
+																margin: 0;
+																padding: 0;
+																border: none;
+																font-family: Arial,
+																	Helvetica, sans-serif !important;
+																font-size: 16px;
+																line-height: 1.3;
+															"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																class="chs_body"
+															>
+																<tr>
+																	<td
+																		class="part_4_content_bg box_content"
+																	>
+																		<table
+																			width="100%"
+																			border="0"
+																			cellpadding="0"
+																			cellspacing="0"
+																			class="chs_body"
+																		>
+																			<tr>
+																				<td
+																					class="part_4_content_text"
+																				>
+																					Donec
+																					et
+																					consequat
+																					ligula.
+																					Cras
+																					nunc
+																					ante,
+																					bibendum
+																					sed
+																					maximus
+																					eu,
+																					scelerisque
+																					quis
+																					nisl.
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td
+												align="left"
+												valign="top"
+												style="
+													margin: 0;
+													padding: 0 0 15px 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="chs_body"
+												>
+													<tr>
+														<td
+															width="151"
+															align="center"
+															valign="top"
+															style="
+																margin: 0;
+																padding: 0;
+																border: none;
+																font-family: Arial,
+																	Helvetica, sans-serif !important;
+																font-size: 16px;
+																line-height: 1.3;
+															"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																class="chs_body"
+															>
+																<tr>
+																	<td
+																		class="part_4_content_bg box_content"
+																	>
+																		<table
+																			width="100%"
+																			border="0"
+																			cellpadding="0"
+																			cellspacing="0"
+																			class="chs_body"
+																		>
+																			<tr>
+																				<td
+																					class="part_4_content_text"
+																				>
+																					Donec
+																					et
+																					consequat
+																					ligula.
+																					Cras
+																					nunc
+																					ante,
+																					bibendum
+																					sed
+																					maximus
+																					eu,
+																					scelerisque
+																					quis
+																					nisl.
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td
+												align="left"
+												valign="top"
+												style="
+													margin: 0;
+													padding: 0 0 15px 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="chs_body"
+												>
+													<tr>
+														<td
+															width="151"
+															align="center"
+															valign="top"
+															style="
+																margin: 0;
+																padding: 0;
+																border: none;
+																font-family: Arial,
+																	Helvetica, sans-serif !important;
+																font-size: 16px;
+																line-height: 1.3;
+															"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																class="chs_body"
+															>
+																<tr>
+																	<td
+																		class="part_4_content_bg box_content"
+																	>
+																		<table
+																			width="100%"
+																			border="0"
+																			cellpadding="0"
+																			cellspacing="0"
+																			class="chs_body"
+																		>
+																			<tr>
+																				<td
+																					class="part_4_content_text"
+																				>
+																					Donec
+																					et
+																					consequat
+																					ligula.
+																					Cras
+																					nunc
+																					ante,
+																					bibendum
+																					sed
+																					maximus
+																					eu,
+																					scelerisque
+																					quis
+																					nisl.
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td
+												align="left"
+												valign="top"
+												style="
+													margin: 0;
+													padding: 0 0 15px 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="chs_body"
+												>
+													<tr>
+														<td
+															width="151"
+															align="center"
+															valign="top"
+															style="
+																margin: 0;
+																padding: 0;
+																border: none;
+																font-family: Arial,
+																	Helvetica, sans-serif !important;
+																font-size: 16px;
+																line-height: 1.3;
+															"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																class="chs_body"
+															>
+																<tr>
+																	<td
+																		class="part_4_content_bg box_content"
+																	>
+																		<table
+																			width="100%"
+																			border="0"
+																			cellpadding="0"
+																			cellspacing="0"
+																			class="chs_body"
+																		>
+																			<tr>
+																				<td
+																					class="part_4_content_text"
+																				>
+																					Donec
+																					et
+																					consequat
+																					ligula.
+																					Cras
+																					nunc
+																					ante,
+																					bibendum
+																					sed
+																					maximus
+																					eu,
+																					scelerisque
+																					quis
+																					nisl.
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td
+												align="left"
+												valign="top"
+												style="
+													margin: 0;
+													padding: 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="chs_body"
+												>
+													<tr>
+														<td
+															class="part_4_btn_bg"
+															width="151"
+															align="center"
+															valign="top"
+														>
+															<a
+																class="part_4_btn_content"
+																href="#"
+																target="_blank"
+																><strong
+																	>TÌM HIỂU THÊM</strong
+																></a
+															>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td
+												align="left"
+												valign="top"
+												style="
+													margin: 0;
+													padding: 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="chs_body"
+												>
+													<tr>
+														<td
+															class="part_4_btn_bg"
+															width="151"
+															align="center"
+															valign="top"
+														>
+															<a
+																class="part_4_btn_content"
+																href="#"
+																target="_blank"
+																><strong
+																	>TÌM HIỂU THÊM</strong
+																></a
+															>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td
+												align="left"
+												valign="top"
+												style="
+													margin: 0;
+													padding: 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="chs_body"
+												>
+													<tr>
+														<td
+															class="part_4_btn_bg"
+															width="151"
+															align="center"
+															valign="top"
+														>
+															<a
+																class="part_4_btn_content"
+																href="#"
+																target="_blank"
+																><strong
+																	>TÌM HIỂU THÊM</strong
+																></a
+															>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td
+												align="left"
+												valign="top"
+												style="
+													margin: 0;
+													padding: 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="chs_body"
+												>
+													<tr>
+														<td
+															class="part_4_btn_bg"
+															width="151"
+															align="center"
+															valign="top"
+														>
+															<a
+																class="part_4_btn_content"
+																href="#"
+																target="_blank"
+																><strong
+																	>TÌM HIỂU THÊM</strong
+																></a
+															>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+
+									<!-- Card Mobile -->
+									<!--[if !mso]><!-- -->
+									<div class="hide-on-desktop" style="width: 100%">
+										<table
+											width="100%"
+											cellpadding="0"
+											cellspacing="8"
+											border="0"
+											role="presentation"
+										>
+											<tr>
+												<td
+													align="center"
+													valign="top"
+													style="
+														margin: 0;
+														padding: 0;
+														border: none;
+														font-family: Arial, Helvetica,
+															sans-serif !important;
+														font-size: 16px;
+														line-height: 1.3;
+														color: #ffffff;
+													"
+												>
+													<img
+														src="image/chs_box_6.jpg"
+														width="100%"
+														height="auto"
+														alt=""
+														style="display: block"
+													/>
+												</td>
+											</tr>
+											<tr>
+												<td class="part_4_content_bg box_content">
+													<table
+														width="100%"
+														border="0"
+														cellpadding="0"
+														cellspacing="0"
+														class="chs_body"
+													>
+														<tr>
+															<td
+																width="302"
+																class="part_4_content_text"
+															>
+																Donec et consequat ligula.
+																Cras nunc ante, bibendum
+																sed maximus eu,
+																scelerisque quis nisl.
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td
+													class="part_4_btn_bg"
+													width="auto"
+													align="center"
+													valign="top"
+												>
+													<a
+														class="part_4_btn_content"
+														href="#"
+														target="_blank"
+														><strong>TÌM HIỂU THÊM</strong></a
+													>
+												</td>
+											</tr>
+										</table>
+										<table>
+											<tr>
+												<td height="3">&nbsp;</td>
+											</tr>
+										</table>
+										<table
+											width="100%"
+											cellpadding="0"
+											cellspacing="8"
+											border="0"
+											role="presentation"
+										>
+											<tr>
+												<td
+													align="center"
+													valign="top"
+													style="
+														margin: 0;
+														padding: 0;
+														border: none;
+														font-family: Arial, Helvetica,
+															sans-serif !important;
+														font-size: 16px;
+														line-height: 1.3;
+														color: #ffffff;
+													"
+												>
+													<img
+														src="image/chs_box_6.jpg"
+														width="100%"
+														height="auto"
+														alt=""
+														style="display: block"
+													/>
+												</td>
+											</tr>
+											<tr>
+												<td class="part_4_content_bg box_content">
+													<table
+														width="100%"
+														border="0"
+														cellpadding="0"
+														cellspacing="0"
+														class="chs_body"
+													>
+														<tr>
+															<td
+																width="302"
+																class="part_4_content_text"
+															>
+																Donec et consequat ligula.
+																Cras nunc ante, bibendum
+																sed maximus eu,
+																scelerisque quis nisl.
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td
+													class="part_4_btn_bg"
+													width="auto"
+													align="center"
+													valign="top"
+												>
+													<a
+														class="part_4_btn_content"
+														href="#"
+														target="_blank"
+														><strong>TÌM HIỂU THÊM</strong></a
+													>
+												</td>
+											</tr>
+										</table>
+										<table>
+											<tr>
+												<td height="3">&nbsp;</td>
+											</tr>
+										</table>
+										<table
+											width="100%"
+											cellpadding="0"
+											cellspacing="8"
+											border="0"
+											role="presentation"
+										>
+											<tr>
+												<td
+													align="center"
+													valign="top"
+													style="
+														margin: 0;
+														padding: 0;
+														border: none;
+														font-family: Arial, Helvetica,
+															sans-serif !important;
+														font-size: 16px;
+														line-height: 1.3;
+														color: #ffffff;
+													"
+												>
+													<img
+														src="image/chs_box_6.jpg"
+														width="100%"
+														height="auto"
+														alt=""
+														style="display: block"
+													/>
+												</td>
+											</tr>
+											<tr>
+												<td class="part_4_content_bg box_content">
+													<table
+														width="100%"
+														border="0"
+														cellpadding="0"
+														cellspacing="0"
+														class="chs_body"
+													>
+														<tr>
+															<td
+																width="302"
+																class="part_4_content_text"
+															>
+																Donec et consequat ligula.
+																Cras nunc ante, bibendum
+																sed maximus eu,
+																scelerisque quis nisl.
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td
+													class="part_4_btn_bg"
+													width="auto"
+													align="center"
+													valign="top"
+												>
+													<a
+														class="part_4_btn_content"
+														href="#"
+														target="_blank"
+														><strong>TÌM HIỂU THÊM</strong></a
+													>
+												</td>
+											</tr>
+										</table>
+										<table>
+											<tr>
+												<td height="3">&nbsp;</td>
+											</tr>
+										</table>
+										<table
+											width="100%"
+											cellpadding="0"
+											cellspacing="8"
+											border="0"
+											role="presentation"
+										>
+											<tr>
+												<td
+													align="center"
+													valign="top"
+													style="
+														margin: 0;
+														padding: 0;
+														border: none;
+														font-family: Arial, Helvetica,
+															sans-serif !important;
+														font-size: 16px;
+														line-height: 1.3;
+														color: #ffffff;
+													"
+												>
+													<img
+														src="image/chs_box_6.jpg"
+														width="100%"
+														height="auto"
+														alt=""
+														style="display: block"
+													/>
+												</td>
+											</tr>
+											<tr>
+												<td class="part_4_content_bg box_content">
+													<table
+														width="100%"
+														border="0"
+														cellpadding="0"
+														cellspacing="0"
+														class="chs_body"
+													>
+														<tr>
+															<td
+																width="302"
+																class="part_4_content_text"
+															>
+																Donec et consequat ligula.
+																Cras nunc ante, bibendum
+																sed maximus eu,
+																scelerisque quis nisl.
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td
+													class="part_4_btn_bg"
+													width="auto"
+													align="center"
+													valign="top"
+												>
+													<a
+														class="part_4_btn_content"
+														href="#"
+														target="_blank"
+														><strong>TÌM HIỂU THÊM</strong></a
+													>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<!--<![endif]-->
+								</div>
+							</td>
+						</tr>
+					</table>
+
+					<!-- Footer -->
+					<footer>
+						<table
+							width="100%"
+							cellpadding="0"
+							cellspacing="0"
+							class="footer-container"
+						>
+							<tr>
+								<td class="footer-container-main">
+									<table
+										role="presentation"
+										width="100%"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<!-- Cột trái (footer-1) -->
+											<td
+												width="45%"
+												valign="top"
+												align="right"
+												style="padding: 0px 25px 0px 0"
+												class="stack-column-top"
+											>
+												<div style="margin-bottom: 5px">
+													Click
+													<strong>
+														<a
+															href="#"
+															target="_blank"
+															style="
+																color: #db0011;
+																text-decoration: none;
+															"
+														>
+															hsbc.com.vn
+														</a>
+													</strong>
+												</div>
+												<div>
+													<img
+														src="image/chs_img_facebook.jpg"
+														width="12"
+														height="12"
+														alt="facebook"
+														style="vertical-align: middle"
+													/>
+													<a
+														href="#"
+														target="_blank"
+														class="footer-social"
+														title="Liên kết này có thể cho Quý khách truy cập đến trang web khác không phải của HSBC..."
+														style="
+															padding-left: 5px;
+															vertical-align: middle;
+															color: #252525;
+															text-decoration: none;
+															font-size: 12px;
+														"
+													>
+														www.facebook.com/HSBCVietnam
+													</a>
+												</div>
+											</td>
+
+											<!-- Border ngăn cách -->
+											<td
+												class="hide-on-mobile"
+												style="
+													border-left: 3px solid #db0011;
+													padding: 0;
+													margin: 0;
+												"
+											></td>
+
+											<!-- Cột phải (footer-2) -->
+											<td
+												width="53%"
+												valign="top"
+												align="left"
+												style="padding: 0px 0 0px 10px"
+												class="stack-column-bottom"
+											>
+												<div style="margin-bottom: 5px">
+													Call
+													<strong>
+														<a
+															href="#"
+															target="_blank"
+															style="
+																color: #db0011;
+																text-decoration: none;
+																padding-left: 5px;
+															"
+														>
+															(84 28) 37 247 247
+														</a>
+													</strong>
+													(the South)
+												</div>
+												<div>
+													Or
+													<strong>
+														<a
+															href="#"
+															target="_blank"
+															style="
+																color: #db0011;
+																text-decoration: none;
+																padding-left: 5px;
+															"
+														>
+															(84 24) 62 707 707
+														</a>
+													</strong>
+													(the North)
+												</div>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+
+						<table
+							width="100%"
+							border="0"
+							cellpadding="0"
+							cellspacing="0"
+							class="footer_container"
+							style="
+								margin: 0;
+								border: none;
+								font-family: Arial, Helvetica, sans-serif !important;
+								font-size: 16px;
+								line-height: 1.3;
+								color: #000000;
+								background-color: rgb(245, 245, 245);
+							"
+						>
+							<tr>
+								<td>
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td
+												align="left"
+												class="content_text_footer"
+												style="padding: 0"
+											>
+												Important information:
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												This material is designed for use in
+												Vietnam. The products and services
+												represented within this material are
+												intended for Vietnam customers. If you are
+												outside of Vietnam, we may not be
+												authorized to offer or provide you with
+												the products and services available
+												through this material in the country or
+												region you are located or resident in.
+												This material is not intended for
+												distribution or use by any person in any
+												jurisdiction, country or region where the
+												distribution or use of this material is
+												restricted and would not be permitted by
+												law or regulation.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												This material provided by HSBC Bank
+												Vietnam (Ltd) ('HSBC Vietnam'). HSBC
+												Vietnam is authorized and regulated in
+												Vietnam by State Bank of Vietnam.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												You are receiving this e-mail because you
+												have consented to HSBC Bank (Vietnam) Ltd.
+												('we', 'us' or 'our') sending you
+												promotional materials/ information
+												regarding our products and services. You
+												may, at any time, choose not to receive
+												e-mail marketing literature / information
+												about our service.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												You can unsubscribe by calling our contact
+												center or visiting one of our branches.
+												Otherwise, you can also unsubscribe
+												digitally by sending an email (regardless
+												of title and content) to
+												<span>unsubscribe</span
+												><span style="display: none">@</span
+												>@<span>hsbc</span>.<span>com</span>.<span
+													>vn</span
+												>
+												from the e-mail address you no longer wish
+												to receive promotional emails from HSBC
+												Bank (Vietnam) Ltd. Please note that your
+												request will be recorded as soon as HSBC
+												Bank receives your request. The
+												unsubscription will take effect after at
+												least 4 working days. However, we
+												recommend that you remain subscribed to
+												our email in order to stay updated of our
+												latest products, services, and privileged
+												promotion offers.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												This e-mail is confidential. It may also
+												be legally privileged. If you are not the
+												addressee you may not copy, forward,
+												disclose or use any part of it. If you
+												have received this message in error,
+												please delete it and all copies from your
+												system.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Please do not reply to this e-mail. Please
+												contact our HSBC Contact Center.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												We maintain strict security standards and
+												procedures to prevent unauthorised access
+												to information about you. HSBC will never
+												contact you by e-mail or otherwise to ask
+												you to validate personal information such
+												as your user ID, password, or account/
+												credit card numbers. If you receive such a
+												request, please call our Contact Center.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												We also remind our customers to connect
+												only to our HSBC website when accessing
+												Internet Banking. Never follow a link
+												within an e mail to start an Internet
+												Banking session. Instead, key in directly
+												to the browser address bar our HSBC
+												website to access our secured Internet
+												Banking site.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												© Copyright. HSBC Bank (Vietnam) Ltd. All
+												rights reserved.
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</footer>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

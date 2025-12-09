@@ -1,0 +1,3966 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Template 6</title>
+
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				margin: 0 auto;
+				font-family: Arial, sans-serif;
+				font-size: 16px;
+				line-height: 24px;
+				width: 700px;
+				background: #f3f3f3;
+				color: #333333;
+			}
+			p {
+				font-size: 16px;
+				margin: 16px 0;
+			}
+			/* Common */
+			.button {
+				background: #db0011;
+				padding: 16px 60px;
+				display: inline-block;
+				color: white;
+				cursor: pointer;
+				font-weight: bold;
+				font-size: 16px;
+			}
+
+			.text-common {
+				margin: 0;
+				padding: 0;
+				border: none;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 16px;
+				line-height: 1.3;
+				color: #000000;
+			}
+
+			.font-color {
+				color: #000000;
+			}
+
+			.background-color {
+				background: #ffffff;
+			}
+
+			.font-size-24 {
+				font-size: 24px !important;
+			}
+
+			.border-color {
+				border-color: #333333;
+			}
+
+			.line {
+				background: #ffffff;
+			}
+
+			.button-primary {
+				margin: 0;
+				padding: 15px;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 18px;
+				line-height: 1.3;
+				color: #000000;
+				background: #e3e3e3;
+			}
+			/* End common CSS */
+
+			.header-intro {
+				padding-top: 0px;
+				font-size: 32px;
+				color: #000000;
+				line-height: 40px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			/* Part 1 */
+			.img-part-1 {
+				padding: 0 16px 0 0;
+			}
+
+			/* Part 2 */
+			.header-part-2 {
+				padding: 0 150px 0 0;
+			}
+
+			.card-content-part-2 {
+				margin: 0;
+				padding: 0 0 0 24px;
+				border: none;
+			}
+
+			/* Part 3 */
+			.header-part-3 {
+				padding: 0 170px 0 0 !important;
+				font-size: 24px;
+			}
+
+			/* Part 4 */
+			.header-part-4 {
+				padding: 32px 60px 12px 60px;
+			}
+
+			/* Part 8 */
+			.cell-common-style {
+				padding: 16px;
+				border: 1px solid #333333;
+				box-sizing: border-box;
+				background-color: #ffffff;
+				color: #000000;
+			}
+
+			.cell-middle-style {
+				border-left: none;
+				border-right: none;
+			}
+
+			/* Others CSS */
+			.title_box {
+				font-size: 23px;
+				line-height: 30px;
+			}
+
+			.title_item {
+				font-size: 19px;
+				line-height: 27px;
+			}
+
+			/* Body content */
+			.body_content {
+				border: 1px solid #d7d8d6;
+				background: #ffffff;
+				width: 700px;
+			}
+
+			/* Hero */
+			.hero_logo {
+				padding: 32px 45px;
+			}
+
+			/* Tạo padding */
+			.main_body {
+				padding: 32px 45px;
+			}
+
+			/* Footer */
+			footer {
+				background-color: #e4e8eb;
+			}
+
+			.footer-container {
+				font-size: 16px;
+				line-height: 1.3;
+				color: #000000;
+				background-color: #ededed;
+			}
+
+			.footer-container-main {
+				padding: 16px 0 !important;
+			}
+
+			.content_text_footer {
+				margin: 0;
+				padding: 10px 0 0 0;
+				border: none;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 12px;
+				line-height: 16px;
+				color: #808080;
+			}
+
+			.footer_container {
+				padding: 32px 45px;
+			}
+
+			/* Dark mode */
+			@media (prefers-color-scheme: dark) {
+				body {
+					background: #101010 !important;
+				}
+
+				/* CSS common */
+				.text-common {
+					color: #ffffff;
+				}
+
+				.font-color {
+					color: #ffffff !important;
+				}
+
+				.background-color {
+					background: #212121 !important;
+				}
+
+				.border-color {
+					border-color: #ededed !important;
+				}
+
+				.line {
+					background: #212121 !important;
+				}
+
+				/* CSS intro */
+				.header-intro {
+					color: #ffffff;
+				}
+
+				.cell-common-style {
+					border: 1px solid #ededed;
+					background-color: #212121;
+					color: #ffffff;
+				}
+
+				.body_content {
+					color: #ffffff !important;
+					background: #212121 !important;
+					border: 1px solid #767676 !important;
+				}
+
+				.footer-container {
+					background-color: #1d1d1d !important;
+					color: #ffffff !important;
+				}
+
+				.footer_container {
+					background: #333333 !important;
+					color: #ffffff !important;
+				}
+
+				.footer-social {
+					color: #ffffff !important;
+				}
+			}
+
+			/* Mobile */
+			@media (max-width: 768px) {
+				body {
+					width: 100%;
+					padding: 16px;
+				}
+
+				.body_content {
+					border: 1px solid #d7d8d6;
+					width: 100% !important;
+				}
+
+				/* Hero */
+				.hero_logo {
+					padding: 32px 22px;
+				}
+
+				/* Tạo padding */
+				.main_body {
+					padding: 16px 22px 32px 22px;
+				}
+
+				/* Common */
+				.button {
+					width: 100% !important;
+					display: table;
+				}
+
+				.td-mobile {
+					display: block !important;
+					width: 100% !important;
+					max-width: 100% !important;
+				}
+
+				.button-primary-container {
+					width: 100% !important;
+					max-width: 100% !important;
+				}
+
+				/* Part 1 */
+				.img-part-1 {
+					padding: 16px 0 !important;
+				}
+
+				/* Part 2 */
+				.header-part-2 {
+					padding: 0 !important;
+				}
+
+				.card-content-part-2 {
+					margin: 0;
+					padding: 16px;
+					border: none;
+				}
+
+				.img-chs-box {
+					padding: 16px 0 !important;
+				}
+
+				/* Part 3 */
+				.header-part-3 {
+					padding: 0 0 0 0 !important;
+				}
+
+				/* Part 4 */
+				.header-part-4 {
+					padding: 32px 0 12px 0 !important;
+				}
+
+				.img-header {
+					padding-top: 16px !important;
+				}
+
+				.card-part-4 {
+					padding: 0 16px 16px 16px !important;
+				}
+
+				/* Part 5 */
+				.card-part-5,
+				.header-part-5 {
+					padding: 0 !important;
+				}
+
+				.arrow-icon-part-5 {
+					transform: rotate(90deg);
+				}
+
+				/* Part 6 */
+				.header-part-6 {
+					padding: 0 !important;
+				}
+
+				.hidden-border-card-p-6 {
+					border: unset !important;
+				}
+
+				/* Part 8 */
+				.cell-middle-style {
+					border: 1px solid !important;
+					border-bottom: none !important;
+					border-top: none !important;
+				}
+
+				.top-border {
+					border-top: 1px solid !important;
+				}
+
+				/* Content */
+				.item {
+					display: block;
+				}
+
+				.hide-on-mobile {
+					display: none;
+				}
+
+				/* footer */
+				.footer-container-main {
+					padding: 0 32px !important;
+				}
+
+				.stack-column-top {
+					display: block !important;
+					width: 100% !important;
+					max-width: 100% !important;
+					text-align: center;
+					padding: 16px 0 !important;
+					font-size: 14px !important;
+				}
+
+				.stack-column-bottom {
+					display: block !important;
+					width: 100% !important;
+					max-width: 100% !important;
+					text-align: center;
+					border-top: 2px solid #db0011;
+					padding: 16px 0 !important;
+					font-size: 14px !important;
+				}
+
+				.footer_container {
+					padding: 16px 22px !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Pre-header -->
+		<div
+			style="
+				display: none;
+				font-size: 1px;
+				color: #ffffff;
+				line-height: 1px;
+				max-height: 0px;
+				max-width: 0px;
+				opacity: 0;
+				overflow: hidden;
+			"
+		>
+			Chúng tôi có ưu đãi đặc biệt dành cho bạn hôm nay...
+		</div>
+		<!-- Body content -->
+		<table
+			class="body_content"
+			border="0"
+			cellpadding="0"
+			cellspacing="0"
+			align="center"
+		>
+			<tr>
+				<td>
+					<!-- Hero -->
+					<div class="hero">
+						<table
+							width="100%"
+							cellpadding="0"
+							cellspacing="0"
+							border="0"
+							class="hero_logo"
+						>
+							<tr>
+								<td align="left" valign="bottom">
+									<img
+										src="image/chs_hsbc_logo.jpg"
+										width="104"
+										height="28"
+										alt=""
+										style="display: block"
+									/>
+								</td>
+								<td align="right" valign="bottom">
+									<img
+										src="image/chs_hsbc_cards.jpg"
+										height="50"
+										alt=""
+										style="display: block"
+									/>
+								</td>
+							</tr>
+						</table>
+						<img
+							src="image/chs_hsbc_key.jpg"
+							height="auto"
+							alt=""
+							width="100%"
+						/>
+					</div>
+					<!-- Bọc padding -->
+					<table width="100%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td class="main_body">
+								<!-- Intro -->
+								<div class="intro">
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td
+												valign="top"
+												align="left"
+												class="header-intro"
+											>
+												Lorem ipsum dolor sit amet, consectetur
+												adipiscing elit, sed do eiusmod tempo
+											</td>
+										</tr>
+										<tr>
+											<td
+												align="left"
+												valign="top"
+												style="padding: 16px 0"
+												class="text-common"
+											>
+												Kính gửi Quý khách hàng &lt; Name&gt;
+											</td>
+										</tr>
+										<tr>
+											<td
+												align="left"
+												valign="top"
+												class="text-common"
+											>
+												Lorem ipsum dolor sit amet, consectetur
+												adipiscing elit, sed do eiusmod tempor
+												incididunt ut labore et dolore magna
+												aliqua. Quis ipsum suspendisse ultrices
+												gravida. Risus commodo viverra maecenas
+												accumsan lacus vel facilisis.
+											</td>
+										</tr>
+									</table>
+								</div>
+								<!-- Part 1 -->
+								<div class="part-1">
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td
+												align="center"
+												style="
+													margin: 0;
+													padding: 80px 0 0 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 24px;
+													line-height: 1.3;
+													color: #000000;
+												"
+												class="font-color"
+											>
+												<strong
+													>Sed do eiusmod tempor incididunt ut
+													labore et dolore magna aliqua</strong
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												align="center"
+												style="padding: 16px 0"
+												class="text-common"
+											>
+												Nulla fermentum tincidunt augue, suscipit
+												fermentum neque posuere venenatis.
+												Curabitur condimentum diam justo, in
+												dignissim lorem tempus quis. Donec erat
+												ipsum, pulvinar sit amet odio eget,
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+												>
+													<tr>
+														<td
+															width="300"
+															align="left"
+															style="padding: 0 16px 0 0"
+															class="td-mobile img-part-1"
+														>
+															<img
+																src="image/chs_box_1.png"
+																width="100%"
+																height="auto"
+																alt=""
+																style="display: block"
+															/>
+														</td>
+														<td class="td-mobile">
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td>
+																		<table
+																			width="100%"
+																			border="0"
+																			cellpadding="0"
+																			cellspacing="0"
+																		>
+																			<!-- Row 1 -->
+																			<tr>
+																				<td
+																					width="50"
+																					align="center"
+																					class="td-mobile img-chs-box"
+																				>
+																					<img
+																						src="image/chs_box_2.png"
+																						width="36"
+																						height="auto"
+																						alt=""
+																						style="
+																							display: block;
+																						"
+																					/>
+																				</td>
+																				<td
+																					class="text-common td-mobile"
+																				>
+																					Vestibulum
+																					faucibus
+																					elit
+																					vitae
+																					tellus
+																					maximus,
+																					vel
+																					ornare
+																					mauris
+																					tempus.
+																					Quisque
+																					nunc
+																				</td>
+																			</tr>
+																			<!-- Line -->
+																			<tr>
+																				<td
+																					height="10"
+																					align="center"
+																					style="
+																						border-bottom: 1px
+																							solid
+																							#333333;
+																						font-size: 1px;
+																					"
+																					class="border-color"
+																				></td>
+																				<td
+																					height="10"
+																					align="center"
+																					style="
+																						border-bottom: 1px
+																							solid
+																							#333333;
+																						font-size: 1px;
+																					"
+																					class="border-color"
+																				></td>
+																			</tr>
+																			<!-- Row 2 -->
+																			<tr>
+																				<td
+																					width="50"
+																					align="center"
+																					style="
+																						padding: 16px
+																							0
+																							0
+																							0;
+																					"
+																					class="td-mobile"
+																				>
+																					<img
+																						src="image/chs_box_3.png"
+																						width="36"
+																						height="auto"
+																						alt=""
+																						style="
+																							display: block;
+																						"
+																					/>
+																				</td>
+																				<td
+																					style="
+																						padding: 16px
+																							0
+																							0
+																							0;
+																					"
+																					class="text-common td-mobile"
+																				>
+																					Vestibulum
+																					faucibus
+																					elit
+																					vitae
+																					tellus
+																					maximus,
+																					vel
+																					ornare
+																					mauris
+																					tempus.
+																					Quisque
+																					nunc
+																				</td>
+																			</tr>
+																			<!-- Line -->
+																			<tr>
+																				<td
+																					height="10"
+																					align="center"
+																					style="
+																						border-bottom: 1px
+																							solid
+																							#333333;
+																						font-size: 1px;
+																					"
+																					class="border-color"
+																				></td>
+																				<td
+																					height="10"
+																					align="center"
+																					style="
+																						border-bottom: 1px
+																							solid
+																							#333333;
+																						font-size: 1px;
+																					"
+																					class="border-color"
+																				></td>
+																			</tr>
+																			<!-- Row 3 -->
+																			<tr>
+																				<td
+																					width="50"
+																					align="center"
+																					style="
+																						padding: 16px
+																							0
+																							0
+																							0;
+																					"
+																					class="td-mobile"
+																				>
+																					<img
+																						src="image/chs_box_4.png"
+																						width="36"
+																						height="auto"
+																						alt=""
+																						style="
+																							display: block;
+																						"
+																					/>
+																				</td>
+																				<td
+																					style="
+																						padding: 16px
+																							0
+																							0
+																							0;
+																					"
+																					class="text-common td-mobile"
+																				>
+																					Vestibulum
+																					faucibus
+																					elit
+																					vitae
+																					tellus
+																					maximus,
+																					vel
+																					ornare
+																					mauris
+																					tempus.
+																					Quisque
+																					nunc
+																				</td>
+																			</tr>
+																			<!-- Line -->
+																			<tr>
+																				<td
+																					height="10"
+																					align="center"
+																					style="
+																						border-bottom: 1px
+																							solid
+																							#333333;
+																						font-size: 1px;
+																					"
+																					class="border-color"
+																				></td>
+																				<td
+																					height="10"
+																					align="center"
+																					style="
+																						border-bottom: 1px
+																							solid
+																							#333333;
+																						font-size: 1px;
+																					"
+																					class="border-color"
+																				></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		style="
+																			padding: 16px
+																				0 0 0;
+																		"
+																		class="text-common"
+																	>
+																		<sup
+																			style="
+																				font-size: 11px;
+																			"
+																			>(*)</sup
+																		>
+																		Điều khoản và điều
+																		kiện áp dụng
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+									<!-- Button -->
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										style="padding: 32px 0 0 0"
+									>
+										<tr>
+											<td align="center">
+												<table
+													role="presentation"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													style="text-align: center"
+													class="button"
+												>
+													<tr>
+														<td bgcolor="#db0011">
+															TÌM HIỂU THÊM
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<!-- End Part 1 -->
+								<!-- Line -->
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									role="presentation"
+									style="
+										border-collapse: collapse;
+										background-color: #ffffff;
+									"
+									class="line"
+								>
+									<!-- Phần trên: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-bottom: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần Line: 1px duy nhất -->
+									<tr>
+										<td
+											height="1"
+											style="
+												background-color: #d7d8d6;
+												line-height: 1px;
+												font-size: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+									<!-- Phần dưới: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-top: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+								<!-- Part 2 -->
+								<div class="part-2">
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td
+												style="
+													margin: 0;
+													padding: 0 150px 0 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 24px;
+													line-height: 1.3;
+													color: #000000;
+												"
+												class="font-color header-part-2"
+											>
+												<strong
+													>Sed do eiusmod tempor incididunt ut
+													labore et dolore magna aliqua</strong
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="padding: 16px 0"
+												class="text-common"
+											>
+												Nulla fermentum tincidunt augue, suscipit
+												fermentum neque posuere venenatis.
+												Curabitur condimentum diam justo, in
+												dignissim lorem tempus quis. Donec erat
+												ipsum, pulvinar sit amet odio eget,
+											</td>
+										</tr>
+										<!-- Group 1 -->
+										<tr>
+											<td style="padding: 0 0 10px 0">
+												<table
+													width="310"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="button-primary-container"
+												>
+													<tr>
+														<td
+															align="center"
+															class="button-primary"
+														>
+															<strong>Lorem ipsum</strong>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="border: 1px solid #333333"
+												class="border-color"
+											>
+												<table
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+												>
+													<tr>
+														<td
+															width="310"
+															style="
+																margin: 0;
+																padding: 0;
+																border: none;
+															"
+															class="td-mobile"
+														>
+															<img
+																src="image/chs_box_17.jpg"
+																width="100%"
+																height="auto"
+																alt=""
+																style="display: block"
+															/>
+														</td>
+														<td
+															valign="middle"
+															class="card-content-part-2 td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		style="
+																			margin: 0;
+																			padding: 0;
+																			border: none;
+																		"
+																	>
+																		<img
+																			src="image/chs_box_2.png"
+																			width="36"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: block;
+																			"
+																		/>
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		style="
+																			padding: 16px
+																				0 0 0;
+																		"
+																		class="text-common"
+																	>
+																		Donec et consequat
+																		ligula. Cras nunc
+																		ante, bibendum sed
+																		maximus eu,
+																		scelerisque quis
+																		nisl. Morbi
+																		vulputate dui
+																		nisl, at hendrerit
+																		mi dapibus.
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<!-- End group 1 -->
+										<!-- Padding -->
+										<tr>
+											<td style="padding: 32px 0 0 0"></td>
+										</tr>
+										<!-- Group 2 -->
+										<tr>
+											<td style="padding: 0 0 10px 0">
+												<table
+													width="310"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													class="button-primary-container"
+												>
+													<tr>
+														<td
+															align="center"
+															class="button-primary"
+														>
+															<strong>Lorem ipsum</strong>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="border: 1px solid #333333"
+												class="border-color"
+											>
+												<table
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+												>
+													<tr>
+														<td
+															width="310"
+															style="
+																margin: 0;
+																padding: 0;
+																border: none;
+															"
+															class="td-mobile"
+														>
+															<img
+																src="image/chs_box_17.jpg"
+																width="100%"
+																height="auto"
+																alt=""
+																style="display: block"
+															/>
+														</td>
+														<td
+															valign="middle"
+															class="card-content-part-2 td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		style="
+																			margin: 0;
+																			padding: 0;
+																			border: none;
+																		"
+																	>
+																		<img
+																			src="image/chs_box_3.png"
+																			width="36"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: block;
+																			"
+																		/>
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		style="
+																			padding: 16px
+																				0 0 0;
+																		"
+																		class="text-common"
+																	>
+																		Donec et consequat
+																		ligula. Cras nunc
+																		ante, bibendum sed
+																		maximus eu,
+																		scelerisque quis
+																		nisl. Morbi
+																		vulputate dui
+																		nisl, at hendrerit
+																		mi dapibus.
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<!-- End group 2 -->
+										<tr>
+											<td
+												style="padding: 12px 0 0 0"
+												class="text-common"
+											>
+												<sup style="font-size: 11px">(*)</sup>
+												Điều khoản và điều kiện áp dụng
+											</td>
+										</tr>
+									</table>
+									<!-- Button -->
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										style="padding: 32px 0 0 0"
+									>
+										<tr>
+											<td align="left">
+												<table
+													role="presentation"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													style="text-align: center"
+													class="button"
+												>
+													<tr>
+														<td bgcolor="#db0011">
+															TÌM HIỂU THÊM
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<!-- End Part 2 -->
+								<!-- Line -->
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									role="presentation"
+									style="
+										border-collapse: collapse;
+										background-color: #ffffff;
+									"
+									class="line"
+								>
+									<!-- Phần trên: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-bottom: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần Line: 1px duy nhất -->
+									<tr>
+										<td
+											height="1"
+											style="
+												background-color: #d7d8d6;
+												line-height: 1px;
+												font-size: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+									<!-- Phần dưới: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-top: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+								<!-- Part 3 -->
+								<div class="part-3">
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td
+												style="
+													margin: 0;
+													padding: 0 170px 0 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 24px;
+													line-height: 1.3;
+													color: #000000;
+												"
+												class="font-color header-part-3"
+											>
+												Sed do eiusmod tempor incididunt ut labore
+												et dolore magna aliqua
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="padding: 12px 0 32px 0"
+												class="text-common"
+											>
+												Nulla fermentum tincidunt augue, suscipit
+												fermentum neque posuere venenatis.
+												Curabitur condimentum diam justo, in
+												dignissim lorem tempus quis. Donec erat
+												ipsum, pulvinar sit amet odio eget,
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													margin: 0;
+													padding: 0 0 32px 0;
+													border: none;
+												"
+											>
+												<img
+													src="image/chs_box_6.png"
+													width="100%"
+													height="auto"
+													alt=""
+													style="display: block"
+												/>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													margin: 0;
+													padding: 0;
+													border: none;
+												"
+											>
+												<table
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													style="padding-bottom: 6px"
+												>
+													<tr>
+														<!-- Card 1 -->
+														<td
+															width="200"
+															style="
+																border: 1px solid #333333;
+																mso-line-height-rule: exactly;
+															"
+															class="border-color td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		style="
+																			margin: 0;
+																			padding: 16px;
+																			border: none;
+																			font-family: Arial,
+																				Helvetica,
+																				sans-serif !important;
+																			font-size: 54px;
+																			line-height: 1.3;
+																			color: #000000;
+																		"
+																		class="font-color"
+																	>
+																		8%
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		style="
+																			margin: 0;
+																			padding: 0
+																				16px 16px
+																				16px;
+																			border: none;
+																			font-family: Arial,
+																				Helvetica,
+																				sans-serif !important;
+																			font-size: 16px;
+																			line-height: 1.3;
+																			color: #000000;
+																		"
+																		class="font-color"
+																	>
+																		Donec et consequat
+																		ligula. Cras nunc
+																		ante, bibendum sed
+																		maximus eu,
+																		scelerisque quis
+																		nisl. Morbi
+																		vulputate dui
+																		nisl, at hendrerit
+																		mi
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<!-- Padding -->
+														<td
+															style="padding: 6px"
+															class="td-mobile"
+														></td>
+														<!-- Card 2 -->
+														<td
+															width="200"
+															style="
+																border: 1px solid #333333;
+																mso-line-height-rule: exactly;
+															"
+															class="border-color td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		style="
+																			margin: 0;
+																			padding: 16px;
+																			border: none;
+																			font-family: Arial,
+																				Helvetica,
+																				sans-serif !important;
+																			font-size: 54px;
+																			line-height: 1.3;
+																			color: #000000;
+																		"
+																		class="font-color"
+																	>
+																		8%
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		style="
+																			margin: 0;
+																			padding: 0
+																				16px 16px
+																				16px;
+																			border: none;
+																			font-family: Arial,
+																				Helvetica,
+																				sans-serif !important;
+																			font-size: 16px;
+																			line-height: 1.3;
+																			color: #000000;
+																		"
+																		class="font-color"
+																	>
+																		Donec et consequat
+																		ligula. Cras nunc
+																		ante, bibendum sed
+																		maximus eu,
+																		scelerisque quis
+																		nisl. Morbi
+																		vulputate dui
+																		nisl, at hendrerit
+																		mi
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<!-- Padding -->
+														<td
+															style="padding: 6px"
+															class="td-mobile"
+														></td>
+														<!-- Card 3 -->
+														<td
+															width="200"
+															style="
+																border: 1px solid #333333;
+																mso-line-height-rule: exactly;
+															"
+															class="border-color td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		style="
+																			margin: 0;
+																			padding: 16px;
+																			border: none;
+																			font-family: Arial,
+																				Helvetica,
+																				sans-serif !important;
+																			font-size: 54px;
+																			line-height: 1.3;
+																			color: #000000;
+																		"
+																		class="font-color"
+																	>
+																		8%
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		style="
+																			margin: 0;
+																			padding: 0
+																				16px 16px
+																				16px;
+																			border: none;
+																			font-family: Arial,
+																				Helvetica,
+																				sans-serif !important;
+																			font-size: 16px;
+																			line-height: 1.3;
+																			color: #000000;
+																		"
+																		class="font-color"
+																	>
+																		Donec et consequat
+																		ligula. Cras nunc
+																		ante, bibendum sed
+																		maximus eu,
+																		scelerisque quis
+																		nisl. Morbi
+																		vulputate dui
+																		nisl, at hendrerit
+																		mi
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="padding: 6px 0 0 0"
+												class="text-common"
+											>
+												<sup style="font-size: 11px">(*)</sup>
+												Điều khoản và điều kiện áp dụng
+											</td>
+										</tr>
+									</table>
+									<!-- Button -->
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										style="padding: 32px 0 0 0"
+									>
+										<tr>
+											<td align="center">
+												<table
+													role="presentation"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													style="text-align: center"
+													class="button"
+												>
+													<tr>
+														<td bgcolor="#db0011">
+															TÌM HIỂU THÊM
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<!-- End Part 3 -->
+								<!-- Line -->
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									role="presentation"
+									style="
+										border-collapse: collapse;
+										background-color: #ffffff;
+									"
+									class="line"
+								>
+									<!-- Phần trên: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-bottom: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần Line: 1px duy nhất -->
+									<tr>
+										<td
+											height="1"
+											style="
+												background-color: #d7d8d6;
+												line-height: 1px;
+												font-size: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+									<!-- Phần dưới: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-top: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+								<!-- Part 4 -->
+								<div class="part-4">
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td style="margin: 0; padding: 0">
+												<img
+													src="image/chs_box_7.png"
+													width="100%"
+													height="auto"
+													alt=""
+													style="display: block"
+												/>
+											</td>
+										</tr>
+										<tr>
+											<td
+												align="center"
+												style="
+													margin: 0;
+													padding: 32px 60px 12px 60px;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 24px;
+													line-height: 1.3;
+													color: #000000;
+												"
+												class="font-color header-part-4"
+											>
+												<strong
+													>Sed do eiusmod tempor incididunt ut
+													labore et dolore magna aliqua</strong
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												align="center"
+												style="padding: 0 16px"
+												class="text-common"
+											>
+												Nulla fermentum tincidunt augue, suscipit
+												fermentum neque posuere venenatis.
+												Curabitur condimentum diam justo, in
+												dignissim lorem tempus quis. Donec erat
+												ipsum, pulvinar sit amet odio eget,
+											</td>
+										</tr>
+										<tr>
+											<td
+												height="446"
+												style="padding: 32px 0 12px 0"
+											>
+												<table
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+												>
+													<tr>
+														<!-- Right card -->
+														<td
+															width="305"
+															height="445"
+															style="
+																margin: 0;
+																padding: 0;
+																font-family: Arial,
+																	Helvetica, sans-serif !important;
+																font-size: 16px;
+																line-height: 1.3;
+																border: 1px solid #333333;
+															"
+															class="border-color td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		align="center"
+																		valign="middle"
+																		class="img-header"
+																	>
+																		<img
+																			src="image/chs_box_5.png"
+																			width="58"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: block;
+																			"
+																		/>
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		valign="middle"
+																		style="
+																			margin: 0;
+																			padding: 16px
+																				16px 0
+																				16px;
+																			border: none;
+																			font-family: Arial,
+																				Helvetica,
+																				sans-serif !important;
+																			font-size: 16px;
+																			line-height: 1.3;
+																			color: #000000;
+																		"
+																		class="font-color"
+																	>
+																		Vestibulum
+																		faucibus elit
+																		vitae tellus
+																		maximus, vel
+																		ornare mauris
+																		tempus. Quisque
+																		nunc nunc, sodales
+																		et mattis ut,
+																		pretium et quam.
+																		Vestibulum
+																		faucibus elit
+																		vitae tellus
+																		maximus, vel
+																		ornare mauris
+																		tempus. Quisque
+																		nunc nunc, sodales
+																		et mattis ut,
+																		pretium et quam
+																		Vestibulum
+																		faucibus elit
+																		vitae tellus
+																		maximus, vel
+																		ornare mauris
+																		tempus. Quisque
+																		nunc nunc, sodales
+																		et mattis ut,
+																		pretium et quam
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<!-- Fake gap -->
+														<td
+															height="16"
+															style="padding: 0 8px"
+															class="td-mobile"
+														></td>
+														<!-- Left 3 card -->
+														<td class="td-mobile">
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<!-- Frist -->
+																<tr>
+																	<td
+																		style="
+																			padding: 16px;
+																			border: 1px
+																				solid
+																				#333333;
+																		"
+																		class="border-color card-part-4"
+																	>
+																		<table
+																			width="100%"
+																			border="0"
+																			cellpadding="0"
+																			cellspacing="0"
+																		>
+																			<tr>
+																				<td
+																					width="75"
+																					align="center"
+																					valign="middle"
+																					class="td-mobile img-header"
+																				>
+																					<img
+																						src="image/chs_box_5.png"
+																						width="58"
+																						height="auto"
+																						alt=""
+																						style="
+																							display: block;
+																						"
+																					/>
+																				</td>
+																				<td
+																					valign="middle"
+																					style="
+																						margin: 0;
+																						padding: 0;
+																						border: none;
+																						font-family: Arial,
+																							Helvetica,
+																							sans-serif !important;
+																						font-size: 16px;
+																						line-height: 1.3;
+																						color: #000000;
+																					"
+																					class="font-color td-mobile img-header"
+																				>
+																					Vestibulum
+																					faucibus
+																					elit
+																					vitae
+																					tellus
+																					maximus,
+																					vel
+																					ornare
+																					mauris
+																					tempus.
+																					Quisque
+																					nunc
+																					nunc,
+																					sodales
+																					et
+																					mattis
+																					ut,
+																					pre
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<!-- Fake gap -->
+																<tr>
+																	<td
+																		style="
+																			padding: 8px;
+																		"
+																	></td>
+																</tr>
+																<!-- Second -->
+																<tr>
+																	<td
+																		style="
+																			padding: 16px;
+																			border: 1px
+																				solid
+																				#333333;
+																		"
+																		class="border-color card-part-4"
+																	>
+																		<table
+																			width="100%"
+																			border="0"
+																			cellpadding="0"
+																			cellspacing="0"
+																		>
+																			<tr>
+																				<td
+																					width="75"
+																					align="center"
+																					valign="middle"
+																					class="td-mobile img-header"
+																				>
+																					<img
+																						src="image/chs_box_5.png"
+																						width="58"
+																						height="auto"
+																						alt=""
+																						style="
+																							display: block;
+																						"
+																					/>
+																				</td>
+																				<td
+																					valign="middle"
+																					style="
+																						margin: 0;
+																						padding: 0;
+																						border: none;
+																						font-family: Arial,
+																							Helvetica,
+																							sans-serif !important;
+																						font-size: 16px;
+																						line-height: 1.3;
+																						color: #000000;
+																					"
+																					class="font-color td-mobile img-header"
+																				>
+																					Vestibulum
+																					faucibus
+																					elit
+																					vitae
+																					tellus
+																					maximus,
+																					vel
+																					ornare
+																					mauris
+																					tempus.
+																					Quisque
+																					nunc
+																					nunc,
+																					sodales
+																					et
+																					mattis
+																					ut,
+																					pre
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<!-- Fake gap -->
+																<tr>
+																	<td
+																		style="
+																			padding: 8px;
+																		"
+																	></td>
+																</tr>
+																<!-- Third -->
+																<tr>
+																	<td
+																		style="
+																			padding: 16px;
+																			border: 1px
+																				solid
+																				#333333;
+																		"
+																		class="border-color card-part-4"
+																	>
+																		<table
+																			width="100%"
+																			border="0"
+																			cellpadding="0"
+																			cellspacing="0"
+																		>
+																			<tr>
+																				<td
+																					width="75"
+																					align="center"
+																					valign="middle"
+																					class="td-mobile img-header"
+																				>
+																					<img
+																						src="image/chs_box_5.png"
+																						width="58"
+																						height="auto"
+																						alt=""
+																						style="
+																							display: block;
+																						"
+																					/>
+																				</td>
+																				<td
+																					valign="middle"
+																					style="
+																						margin: 0;
+																						padding: 0;
+																						border: none;
+																						font-family: Arial,
+																							Helvetica,
+																							sans-serif !important;
+																						font-size: 16px;
+																						line-height: 1.3;
+																						color: #000000;
+																					"
+																					class="font-color td-mobile img-header"
+																				>
+																					Vestibulum
+																					faucibus
+																					elit
+																					vitae
+																					tellus
+																					maximus,
+																					vel
+																					ornare
+																					mauris
+																					tempus.
+																					Quisque
+																					nunc
+																					nunc,
+																					sodales
+																					et
+																					mattis
+																					ut,
+																					pre
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td
+												align="center"
+												style="padding: 0"
+												class="text-common"
+											>
+												<sup style="font-size: 11px">(*)</sup>
+												Điều khoản và điều kiện áp dụng
+											</td>
+										</tr>
+									</table>
+									<!-- Button -->
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										style="padding: 32px 0 0 0"
+									>
+										<tr>
+											<td align="center">
+												<table
+													role="presentation"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													style="text-align: center"
+													class="button"
+												>
+													<tr>
+														<td bgcolor="#db0011">
+															TÌM HIỂU THÊM
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<!-- End Part 4 -->
+								<!-- Line -->
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									role="presentation"
+									style="
+										border-collapse: collapse;
+										background-color: #ffffff;
+									"
+									class="line"
+								>
+									<!-- Phần trên: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-bottom: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần Line: 1px duy nhất -->
+									<tr>
+										<td
+											height="1"
+											style="
+												background-color: #d7d8d6;
+												line-height: 1px;
+												font-size: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+									<!-- Phần dưới: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-top: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+								<!-- Part 5 -->
+								<div class="part-5">
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td
+												style="
+													padding: 0 170px 0 0;
+													margin: 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 24px;
+													line-height: 1.3;
+													color: #000000;
+												"
+												class="font-color header-part-5"
+											>
+												Sed do eiusmod tempor incididunt ut labore
+												et dolore magna aliqua
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													padding: 12px 0 32px 0;
+													margin: 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+												class="font-color"
+											>
+												Nulla fermentum tincidunt augue, suscipit
+												fermentum neque posuere venenatis.
+												Curabitur condimentum diam justo, in
+												dignissim lorem tempus quis. Donec erat
+												ipsum, pulvinar sit amet odio eget,
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													padding: 0 0 16px 0;
+													margin: 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+											>
+												<table
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													style="padding: 0 0 12px 0"
+												>
+													<tr>
+														<!-- Card - 1 -->
+														<td
+															width="190"
+															valign="top"
+															style="
+																border: 1px solid #333333;
+															"
+															class="border-color td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		bgcolor="#e3e3e3"
+																		style="
+																			padding: 16px;
+																		"
+																	>
+																		<img
+																			src="image/chs_box_2.png"
+																			width="36"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: block;
+																			"
+																		/>
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		bgcolor="#e3e3e3"
+																		style="
+																			padding: 0
+																				16px 16px
+																				16px;
+																			color: #000000 !important;
+																		"
+																	>
+																		<strong
+																			>NULLA
+																			FERMENTUM</strong
+																		>
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		style="
+																			padding: 16px;
+																		"
+																		class="text-common"
+																	>
+																		Tincidunt augue,
+																		suscipit fermentum
+																		neque posuere
+																		venenatis.
+																		Curabitur
+																		condimentum diam
+																		justo, in
+																		dignissim lorem
+																		tempus quis.
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<!-- Arrow Icon -->
+														<td
+															width="25"
+															align="center"
+															valign="center"
+															style="padding: 4px"
+															class="td-mobile arrow-icon-part-5"
+														>
+															<img
+																src="image/chs_box_9.png"
+																width="14"
+																height="auto"
+																alt=""
+																style="display: block"
+															/>
+														</td>
+														<!-- Card - 2 -->
+														<td
+															width="190"
+															valign="top"
+															style="
+																border: 1px solid #333333;
+															"
+															class="border-color td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		bgcolor="#e3e3e3"
+																		style="
+																			padding: 16px;
+																		"
+																	>
+																		<img
+																			src="image/chs_box_2.png"
+																			width="36"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: block;
+																			"
+																		/>
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		bgcolor="#e3e3e3"
+																		style="
+																			padding: 0
+																				16px 16px
+																				16px;
+																			color: #000000 !important;
+																		"
+																	>
+																		<strong
+																			>NULLA
+																			FERMENTUM</strong
+																		>
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		style="
+																			padding: 16px;
+																		"
+																		class="text-common"
+																	>
+																		Tincidunt augue,
+																		suscipit fermentum
+																		neque posuere
+																		venenatis.
+																		Curabitur
+																		condimentum diam
+																		justo, in
+																		dignissim lorem
+																		tempus quis.
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<!-- Arrow Icon -->
+														<td
+															width="25"
+															align="center"
+															valign="center"
+															style="padding: 4px"
+															class="td-mobile arrow-icon-part-5"
+														>
+															<img
+																src="image/chs_box_9.png"
+																width="14"
+																height="auto"
+																alt=""
+																style="display: block"
+															/>
+														</td>
+														<!-- Card - 3 -->
+														<td
+															width="190"
+															valign="top"
+															style="
+																border: 1px solid #333333;
+															"
+															class="border-color td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		bgcolor="#e3e3e3"
+																		style="
+																			padding: 16px;
+																		"
+																	>
+																		<img
+																			src="image/chs_box_2.png"
+																			width="36"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: block;
+																			"
+																		/>
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		bgcolor="#e3e3e3"
+																		style="
+																			padding: 0
+																				16px 16px
+																				16px;
+																			color: #000000 !important;
+																		"
+																	>
+																		<strong
+																			>NULLA
+																			FERMENTUM</strong
+																		>
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		style="
+																			padding: 16px;
+																		"
+																		class="text-common"
+																	>
+																		Tincidunt augue,
+																		suscipit fermentum
+																		neque posuere
+																		venenatis.
+																		Curabitur
+																		condimentum diam
+																		justo, in
+																		dignissim lorem
+																		tempus quis.
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td
+												align="left"
+												style="padding: 0"
+												class="text-common"
+											>
+												<sup style="font-size: 11px">(*)</sup>
+												Điều khoản và điều kiện áp dụng
+											</td>
+										</tr>
+									</table>
+									<!-- Button -->
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										style="padding: 32px 0 0 0"
+									>
+										<tr>
+											<td align="left">
+												<table
+													role="presentation"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													style="text-align: center"
+													class="button"
+												>
+													<tr>
+														<td bgcolor="#db0011">
+															TÌM HIỂU THÊM
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<!-- End Part 5 -->
+								<!-- Line -->
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									role="presentation"
+									style="
+										border-collapse: collapse;
+										background-color: #ffffff;
+									"
+									class="line"
+								>
+									<!-- Phần trên: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-bottom: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần Line: 1px duy nhất -->
+									<tr>
+										<td
+											height="1"
+											style="
+												background-color: #d7d8d6;
+												line-height: 1px;
+												font-size: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+									<!-- Phần dưới: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-top: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+								<!-- Part 6 -->
+								<div class="part-6">
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td
+												style="
+													padding: 0 150px 0 0;
+													margin: 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 24px;
+													line-height: 1.3;
+													color: #000000;
+												"
+												class="font-color header-part-6"
+											>
+												<strong
+													>Sed do eiusmod tempor incididunt ut
+													labore et dolore magna aliqua</strong
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													padding: 12px 0 32px 0;
+													margin: 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+												class="font-color"
+											>
+												Nulla fermentum tincidunt augue, suscipit
+												fermentum neque posuere venenatis.
+												Curabitur condimentum diam justo, in
+												dignissim lorem tempus quis. Donec erat
+												ipsum, pulvinar sit amet odio eget,
+											</td>
+										</tr>
+										<!-- Card 1 -->
+										<tr>
+											<td
+												style="border: 1px solid #333333"
+												class="border-color"
+											>
+												<table
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+												>
+													<tr>
+														<!-- Left -->
+														<td
+															width="319"
+															style="
+																border-right: 1px solid
+																	#ededed;
+															"
+															class="td-mobile border-color hidden-border-card-p-6"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		align="center"
+																		style="
+																			padding: 24px;
+																		"
+																		class="text-common"
+																	>
+																		<strong
+																			>BƯỚC
+																			1</strong
+																		>
+																	</td>
+																</tr>
+																<tr>
+																	<td align="center">
+																		<img
+																			src="image/chs_box_8.png"
+																			width="319"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: block;
+																			"
+																		/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<!-- Right -->
+														<td
+															valign="middle"
+															class="td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		style="
+																			padding: 24px;
+																		"
+																		class="text-common"
+																	>
+																		Donec et consequat
+																		ligula. Cras nunc
+																		ante, bibendum sed
+																		maximus eu,
+																		scelerisque quis
+																		nisl. Morbi
+																		vulputate dui
+																		nisl, at hendrerit
+																		mi dapibus. Donec
+																		et consequat
+																		ligula. Cras nunc
+																		ante,
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<!-- Line -->
+										<tr>
+											<td
+												style="padding: 8px"
+												class="td-mobile"
+											></td>
+										</tr>
+										<!-- Card 2 -->
+										<tr>
+											<td
+												style="border: 1px solid #333333"
+												class="border-color"
+											>
+												<table
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+												>
+													<tr>
+														<!-- Left -->
+														<td
+															width="319"
+															style="
+																border-right: 1px solid
+																	#ededed;
+															"
+															class="td-mobile border-color hidden-border-card-p-6"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		align="center"
+																		style="
+																			padding: 24px;
+																		"
+																		class="text-common"
+																	>
+																		<strong
+																			>BƯỚC
+																			2</strong
+																		>
+																	</td>
+																</tr>
+																<tr>
+																	<td align="center">
+																		<img
+																			src="image/chs_box_8.png"
+																			width="319"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: block;
+																			"
+																		/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<!-- Right -->
+														<td
+															valign="middle"
+															class="td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		style="
+																			padding: 24px;
+																		"
+																		class="text-common"
+																	>
+																		Donec et consequat
+																		ligula. Cras nunc
+																		ante, bibendum sed
+																		maximus eu,
+																		scelerisque quis
+																		nisl. Morbi
+																		vulputate dui
+																		nisl, at hendrerit
+																		mi dapibus. Donec
+																		et consequat
+																		ligula. Cras nunc
+																		ante,
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<!-- Line -->
+										<tr>
+											<td
+												style="padding: 8px"
+												class="td-mobile"
+											></td>
+										</tr>
+										<!-- Card 3 -->
+										<tr>
+											<td
+												style="border: 1px solid #333333"
+												class="border-color"
+											>
+												<table
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+												>
+													<tr>
+														<!-- Left -->
+														<td
+															width="319"
+															style="
+																border-right: 1px solid
+																	#ededed;
+															"
+															class="td-mobile border-color hidden-border-card-p-6"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		align="center"
+																		style="
+																			padding: 24px;
+																		"
+																		class="text-common"
+																	>
+																		<strong
+																			>BƯỚC
+																			3</strong
+																		>
+																	</td>
+																</tr>
+																<tr>
+																	<td align="center">
+																		<img
+																			src="image/chs_box_8.png"
+																			width="319"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: block;
+																			"
+																		/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<!-- Right -->
+														<td
+															valign="middle"
+															class="td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		style="
+																			padding: 24px;
+																		"
+																		class="text-common"
+																	>
+																		Donec et consequat
+																		ligula. Cras nunc
+																		ante, bibendum sed
+																		maximus eu,
+																		scelerisque quis
+																		nisl. Morbi
+																		vulputate dui
+																		nisl, at hendrerit
+																		mi dapibus. Donec
+																		et consequat
+																		ligula. Cras nunc
+																		ante,
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td
+												align="left"
+												style="padding: 12px 0 0 0"
+												class="text-common"
+											>
+												<sup style="font-size: 11px">(*)</sup>
+												Điều khoản và điều kiện áp dụng
+											</td>
+										</tr>
+									</table>
+									<!-- Button -->
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										style="padding: 32px 0 0 0"
+									>
+										<tr>
+											<td align="center">
+												<table
+													role="presentation"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													style="text-align: center"
+													class="button"
+												>
+													<tr>
+														<td bgcolor="#db0011">
+															TÌM HIỂU THÊM
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<!-- End Part 6 -->
+								<!-- Line -->
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									role="presentation"
+									style="
+										border-collapse: collapse;
+										background-color: #ffffff;
+									"
+									class="line"
+								>
+									<!-- Phần trên: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-bottom: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần Line: 1px duy nhất -->
+									<tr>
+										<td
+											height="1"
+											style="
+												background-color: #d7d8d6;
+												line-height: 1px;
+												font-size: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+									<!-- Phần dưới: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-top: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+								<!-- Part 7 -->
+								<div class="part-7">
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td
+												style="
+													margin: 0;
+													padding: 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 24px;
+													line-height: 1.3;
+													color: #000000;
+												"
+												class="font-color"
+											>
+												<strong
+													>Ưu đãi với Thẻ Thanh Toán Quốc
+													Tế</strong
+												>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													padding: 12px 0 32px 0;
+													margin: 0;
+													border: none;
+													font-family: Arial, Helvetica,
+														sans-serif !important;
+													font-size: 16px;
+													line-height: 1.3;
+													color: #000000;
+												"
+												class="font-color"
+											>
+												Nulla fermentum tincidunt augue, suscipit
+												fermentum neque posuere venenatis.
+												Curabitur condimentum diam justo, in
+												dignissim lorem tempus quis. Donec erat
+												ipsum, pulvinar sit amet odio eget,
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													margin: 0;
+													padding: 0;
+													border: none;
+												"
+											>
+												<table
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+												>
+													<tr>
+														<!-- Card 1 -->
+														<td
+															valign="middle"
+															width="281"
+															class="td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		align="center"
+																		class="text-common"
+																		style="
+																			padding: 24px;
+																		"
+																	>
+																		<strong
+																			>ƯU ĐÃI TẠI
+																			GRAB/
+																			BE</strong
+																		>
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		align="center"
+																		style="
+																			padding: 0
+																				16px 16px
+																				16px;
+																			border: 1px
+																				solid
+																				#333333;
+																		"
+																		class="border-color"
+																	>
+																		<table
+																			width="100%"
+																			border="0"
+																			cellpadding="0"
+																			cellspacing="0"
+																		>
+																			<!-- Group 1 -->
+																			<tr>
+																				<td
+																					align="center"
+																					style="
+																						padding: 16px;
+																					"
+																					valign="middle"
+																				>
+																					<img
+																						src="image/chs_box_11.png"
+																						width="63"
+																						height="auto"
+																						alt=""
+																						style="
+																							display: block;
+																						"
+																					/>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td
+																					align="center"
+																					valign="middle"
+																					style="
+																						border-bottom: 1px
+																							solid
+																							#dcdcdc;
+																						padding: 0
+																							0
+																							16px
+																							0;
+																					"
+																				>
+																					<strong
+																						>Ưu
+																						đãi
+																						10%</strong
+																					>
+																					từ thứ
+																					2 đến
+																					thứ 6
+																				</td>
+																			</tr>
+																			<!-- Group 2 -->
+																			<tr>
+																				<td
+																					align="center"
+																					valign="middle"
+																					style="
+																						padding: 16px;
+																					"
+																				>
+																					<img
+																						src="image/chs_box_12.png"
+																						width="100"
+																						height="auto"
+																						alt=""
+																						style="
+																							display: block;
+																						"
+																					/>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td
+																					align="center"
+																					valign="middle"
+																					style="
+																						border-bottom: 1px
+																							solid
+																							#dcdcdc;
+																						padding: 0
+																							0
+																							16px
+																							0;
+																					"
+																				>
+																					<strong
+																						>Ưu
+																						đãi
+																						10%</strong
+																					>
+																					từ thứ
+																					2 đến
+																					thứ 6
+																				</td>
+																			</tr>
+																			<!-- Group 3 -->
+																			<tr>
+																				<td
+																					align="center"
+																					valign="middle"
+																					style="
+																						padding: 16px;
+																					"
+																				>
+																					<img
+																						src="image/chs_box_13.png"
+																						width="63"
+																						height="auto"
+																						alt=""
+																						style="
+																							display: block;
+																						"
+																					/>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td
+																					align="center"
+																					valign="middle"
+																					style="
+																						padding: 0
+																							0
+																							16px
+																							0;
+																					"
+																				>
+																					<strong
+																						>Ưu
+																						đãi
+																						10%</strong
+																					>
+																					từ thứ
+																					2 đến
+																					thứ 6
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+															<!-- Button -->
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																style="
+																	padding: 32px 0 0 0;
+																"
+															>
+																<tr>
+																	<td align="center">
+																		<table
+																			role="presentation"
+																			border="0"
+																			cellpadding="0"
+																			cellspacing="0"
+																			style="
+																				text-align: center;
+																				width: 100% !important;
+																				display: table !important;
+																			"
+																			class="button"
+																		>
+																			<tr>
+																				<td
+																					bgcolor="#db0011"
+																				>
+																					TÌM
+																					HIỂU
+																					THÊM
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<!-- Fake gap -->
+														<td
+															style="
+																padding: 8px 16px;
+																display: inline-block;
+															"
+															class="td-mobile"
+														></td>
+														<!-- Card 2 -->
+														<td
+															valign="middle"
+															width="281"
+															class="td-mobile"
+														>
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+															>
+																<tr>
+																	<td
+																		align="center"
+																		class="text-common"
+																		style="
+																			padding: 24px;
+																		"
+																	>
+																		<strong
+																			>ƯU ĐÃI NHÀ
+																			HÀNG</strong
+																		>
+																	</td>
+																</tr>
+																<tr>
+																	<td
+																		align="center"
+																		style="
+																			padding: 0
+																				16px 16px
+																				16px;
+																			border: 1px
+																				solid
+																				#333333;
+																		"
+																		class="border-color"
+																	>
+																		<table
+																			width="100%"
+																			border="0"
+																			cellpadding="0"
+																			cellspacing="0"
+																		>
+																			<!-- Group 1 -->
+																			<tr>
+																				<td
+																					align="center"
+																					style="
+																						padding: 16px;
+																					"
+																					valign="middle"
+																				>
+																					<img
+																						src="image/chs_box_11.png"
+																						width="63"
+																						height="auto"
+																						alt=""
+																						style="
+																							display: block;
+																						"
+																					/>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td
+																					align="center"
+																					valign="middle"
+																					style="
+																						border-bottom: 1px
+																							solid
+																							#dcdcdc;
+																						padding: 0
+																							0
+																							16px
+																							0;
+																					"
+																				>
+																					<strong
+																						>Ưu
+																						đãi
+																						10%</strong
+																					>
+																					từ thứ
+																					2 đến
+																					thứ 6
+																				</td>
+																			</tr>
+																			<!-- Group 2 -->
+																			<tr>
+																				<td
+																					align="center"
+																					valign="middle"
+																					style="
+																						padding: 16px;
+																					"
+																				>
+																					<img
+																						src="image/chs_box_12.png"
+																						width="100"
+																						height="auto"
+																						alt=""
+																						style="
+																							display: block;
+																						"
+																					/>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td
+																					align="center"
+																					valign="middle"
+																					style="
+																						border-bottom: 1px
+																							solid
+																							#dcdcdc;
+																						padding: 0
+																							0
+																							16px
+																							0;
+																					"
+																				>
+																					<strong
+																						>Ưu
+																						đãi
+																						10%</strong
+																					>
+																					từ thứ
+																					2 đến
+																					thứ 6
+																				</td>
+																			</tr>
+																			<!-- Group 3 -->
+																			<tr>
+																				<td
+																					align="center"
+																					valign="middle"
+																					style="
+																						padding: 47.5px;
+																					"
+																				>
+																					<!-- <img
+																			src="image/chs_box_13.png"
+																			width="63"
+																			height="auto"
+																			alt=""
+																			style="
+																				display: hidden;
+																			"
+																		/> -->
+																				</td>
+																			</tr>
+																			<tr>
+																				<td
+																					align="center"
+																					valign="middle"
+																					style="
+																						padding: 20px;
+																					"
+																				></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+															<!-- Button -->
+															<table
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																style="
+																	padding: 32px 0 0 0;
+																"
+															>
+																<tr>
+																	<td align="center">
+																		<table
+																			role="presentation"
+																			border="0"
+																			cellpadding="0"
+																			cellspacing="0"
+																			style="
+																				text-align: center;
+																				width: 100% !important;
+																				display: table !important;
+																			"
+																			class="button"
+																		>
+																			<tr>
+																				<td
+																					bgcolor="#db0011"
+																				>
+																					TÌM
+																					HIỂU
+																					THÊM
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td
+												align="left"
+												style="padding: 12px 0 0 0"
+												class="text-common"
+											>
+												<sup style="font-size: 11px">(*)</sup>
+												Điều khoản và điều kiện áp dụng
+											</td>
+										</tr>
+									</table>
+								</div>
+								<!-- End Part 7 -->
+								<!-- Line -->
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									role="presentation"
+									style="
+										border-collapse: collapse;
+										background-color: #ffffff;
+									"
+									class="line"
+								>
+									<!-- Phần trên: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-bottom: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần Line: 1px duy nhất -->
+									<tr>
+										<td
+											height="1"
+											style="
+												background-color: #d7d8d6;
+												line-height: 1px;
+												font-size: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td bgcolor="#e8e8e8">
+								<!-- Part 8 -->
+								<div class="part-8">
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td style="padding: 32px 45px">
+												<table
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+												>
+													<!-- Row 1 -->
+													<tr>
+														<td
+															width="50%"
+															align="left"
+															valign="top"
+															class="cell-common-style td-mobile"
+														>
+															<strong
+																>Đăng ký ngay...</strong
+															>
+														</td>
+														<td
+															width="70"
+															align="center"
+															valign="top"
+															class="cell-common-style cell-middle-style td-mobile"
+														>
+															<img
+																src="image/chs_box_14.png"
+																width="28"
+																height="auto"
+																alt=""
+																style="display: block"
+															/>
+														</td>
+														<td
+															align="left"
+															valign="top"
+															class="cell-common-style td-mobile"
+														>
+															Đăng ký ngay để nhận được
+															những ưu đãi sớm nhất<br />
+															<br />
+															Tìm hiểu thêm tại
+															<a
+																href="#"
+																target="_blank"
+																style="
+																	text-decoration: underline;
+																	color: inherit;
+																"
+																><strong>đây</strong></a
+															>
+														</td>
+													</tr>
+													<!-- Row 2 -->
+													<tr>
+														<td
+															width="50%"
+															align="left"
+															valign="top"
+															style="border-top: unset"
+															class="cell-common-style td-mobile"
+														>
+															<strong>Liên hệ...</strong>
+														</td>
+														<td
+															width="70"
+															align="center"
+															valign="top"
+															style="border-top: unset"
+															class="cell-common-style cell-middle-style td-mobile"
+														>
+															<img
+																src="image/chs_box_15.png"
+																width="28"
+																height="auto"
+																alt=""
+																style="display: block"
+															/>
+														</td>
+														<td
+															align="left"
+															valign="top"
+															style="border-top: unset"
+															class="cell-common-style top td-mobile"
+														>
+															Liên hệ tổng đài để được hỗ
+															trợ trực tiếp<br />
+															<br />
+															Tìm hiểu thêm tại
+															<a
+																href="#"
+																target="_blank"
+																style="
+																	text-decoration: underline;
+																	color: inherit;
+																"
+																><strong>đây</strong></a
+															>
+														</td>
+													</tr>
+													<!-- Row 3 -->
+													<tr>
+														<td
+															width="50%"
+															align="left"
+															valign="top"
+															style="border-top: unset"
+															class="cell-common-style td-mobile"
+														>
+															<strong>Kiểm tra...</strong>
+														</td>
+														<td
+															width="70"
+															align="center"
+															valign="top"
+															style="border-top: unset"
+															class="cell-common-style cell-middle-style td-mobile"
+														>
+															<img
+																src="image/chs_box_16.png"
+																width="28"
+																height="auto"
+																alt=""
+																style="display: block"
+															/>
+														</td>
+														<td
+															align="left"
+															valign="top"
+															style="border-top: unset"
+															class="cell-common-style top-border td-mobile"
+														>
+															Kiểm tra tin nhắn của bạn để
+															nhận được mã giảm giá<br />
+															<br />
+															Tìm hiểu thêm tại
+															<a
+																href="#"
+																target="_blank"
+																style="
+																	text-decoration: underline;
+																	color: inherit;
+																"
+																><strong>đây</strong></a
+															>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<!-- End Part 8 -->
+							</td>
+						</tr>
+					</table>
+					<!-- Footer -->
+					<footer>
+						<table
+							width="100%"
+							cellpadding="0"
+							cellspacing="0"
+							class="footer-container"
+						>
+							<tr>
+								<td class="footer-container-main">
+									<table
+										role="presentation"
+										width="100%"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<!-- Cột trái (footer-1) -->
+											<td
+												width="45%"
+												valign="top"
+												align="right"
+												style="padding: 0px 25px 0px 0"
+												class="stack-column-top"
+											>
+												<div style="margin-bottom: 5px">
+													Truy cập
+													<strong>
+														<a
+															href="#"
+															target="_blank"
+															style="
+																color: #db0011;
+																text-decoration: none;
+															"
+														>
+															hsbc.com.vn
+														</a>
+													</strong>
+												</div>
+												<div>
+													<img
+														src="image/chs_img_facebook.jpg"
+														width="12"
+														height="12"
+														alt="facebook"
+														style="vertical-align: middle"
+													/>
+													<a
+														href="#"
+														target="_blank"
+														class="footer-social"
+														title="Liên kết này có thể cho Quý khách truy cập đến trang web khác không phải của HSBC..."
+														style="
+															padding-left: 5px;
+															vertical-align: middle;
+															color: #252525;
+															text-decoration: none;
+															font-size: 12px;
+														"
+													>
+														www.facebook.com/HSBCVietnam
+													</a>
+												</div>
+											</td>
+
+											<!-- Border ngăn cách -->
+											<td
+												class="hide-on-mobile"
+												style="
+													border-left: 3px solid #db0011;
+													padding: 0;
+													margin: 0;
+												"
+											></td>
+
+											<!-- Cột phải (footer-2) -->
+											<td
+												width="53%"
+												valign="top"
+												align="left"
+												style="padding: 0px 0 0px 10px"
+												class="stack-column-bottom"
+											>
+												<div style="margin-bottom: 5px">
+													Gọi
+													<strong>
+														<a
+															href="#"
+															target="_blank"
+															style="
+																color: #db0011;
+																text-decoration: none;
+																padding-left: 5px;
+															"
+														>
+															(84 28) 37 247 247
+														</a>
+													</strong>
+													(miền Nam)
+												</div>
+												<div>
+													Hoặc
+													<strong>
+														<a
+															href="#"
+															target="_blank"
+															style="
+																color: #db0011;
+																text-decoration: none;
+																padding-left: 5px;
+															"
+														>
+															(84 24) 62 707 707
+														</a>
+													</strong>
+													(miền Bắc)
+												</div>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+
+						<table
+							width="100%"
+							border="0"
+							cellpadding="0"
+							cellspacing="0"
+							class="footer_container"
+							style="
+								margin: 0;
+								border: none;
+								font-family: Arial, Helvetica, sans-serif !important;
+								font-size: 16px;
+								line-height: 1.3;
+								color: #000000;
+								background-color: rgb(245, 245, 245);
+							"
+						>
+							<tr>
+								<td>
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td
+												align="left"
+												class="content_text_footer"
+												style="padding: 0"
+											>
+												Thông tin quan trọng:
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Tài liệu này được thiết kế để sử dụng tại
+												Việt Nam. Các sản phẩm và dịch vụ được đề
+												cập trong tài liệu này nhằm phục vụ cho
+												khách hàng tại Việt Nam. Nếu bạn ở ngoài
+												lãnh thổ Việt Nam, chúng tôi có thể không
+												được phép cung cấp cho bạn các sản phẩm và
+												dịch vụ có sẵn thông qua tài liệu này tại
+												quốc gia hoặc khu vực mà bạn đang ở hoặc
+												cư trú. Tài liệu này không nhằm mục đích
+												phân phối hoặc sử dụng bởi bất kỳ cá nhân
+												nào ở bất kỳ khu vực pháp lý, quốc gia
+												hoặc khu vực nào mà việc phân phối hoặc sử
+												dụng tài liệu này bị hạn chế và sẽ không
+												được phép theo luật hoặc quy định.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Tài liệu này được cung cấp bởi Ngân hàng
+												TNHH Một thành viên HSBC Việt Nam (“HSBC
+												Việt Nam”). HSBC Việt Nam chịu sự quản lý
+												của Ngân hàng Nhà nước Việt Nam.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Sở dĩ Quý khách nhận được thư điện tử này
+												bởi vì Quý khách đã chấp thuận cho Ngân
+												hàng TNHH Một thành viên HSBC (Việt Nam)
+												('Ngân hàng, 'của Ngân hàng') gửi đến cho
+												Quý khách các thông tin và chương trình
+												khuyến mãi liên quan đến sản phẩm và dịch
+												vụ của Ngân hàng. Quý khách có quyền chọn
+												lựa không nhận các thông tin và vật phẩm
+												quảng cáo về dịch vụ Ngân hàng bất kỳ lúc
+												nào.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Để ngừng nhận thư điện tử với thông tin
+												quảng cáo của Ngân hàng, Quý khách vui
+												lòng liên hệ Trung tâm Dịch vụ Khách hàng
+												hoặc đến Chi nhánh/Phòng giao dịch gần
+												nhất của Ngân hàng HSBC để được hỗ trợ.
+												Ngoài ra, Quý khách có thể gửi một thư
+												điện tử (với tiêu đề và nội dung bất kỳ)
+												đến <span>unsubscribe</span
+												><span style="display: none">@</span
+												>@<span>hsbc</span>.<span>com</span>.<span
+													>vn</span
+												>
+												từ hộp thư điện tử mà Quý khách mong muốn
+												ngừng nhận quảng cáo của Ngân hàng. Quý
+												khách vui lòng lưu ý rằng yêu cầu của Quý
+												khách sẽ được ghi nhận ngay khi HSBC nhận
+												được thư điện tử và được thực hiện thành
+												công sớm nhất 4 ngày làm việc sau đó. Tuy
+												nhiên, chúng tôi khuyến khích Quý khách
+												duy trì việc nhận thư điện tử để được cập
+												nhật các thông tin về sản phẩm, dịch vụ
+												mới nhất và các ưu đãi đặc quyền dành
+												riêng cho Quý khách.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Thư điện tử này là bảo mật và có thể đã
+												đăng ký bảo mật về pháp lý. Trong trường
+												hợp Quý khách không phải là nguời nhận
+												thư, Quý khách không được phép sao chép,
+												chuyển, tiết lộ hoặc sử dụng bất kỳ nội
+												dung nào của thư điện tử. Trong trường hợp
+												Quý khách nhận thư bị lỗi, vui lòng xóa
+												thư và tất cả các bản sao trong hệ thống
+												của Quý khách.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Xin vui lòng không hồi âm về địa chỉ thư
+												điện tử này. Vui lòng liên hệ Trung tâm
+												dịch vụ Khách Hàng.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Ngân hàng duy trì chuẩn mực và thủ tục bảo
+												mật nghiêm ngặt để ngăn chặn việc sử dụng
+												trái phép thông tin của khách hàng. HSBC
+												không bao giờ liên lạc bằng email hoặc
+												bằng cách khác để yêu cầu khách hàng xác
+												nhận lại những thông tin cá nhân như tên
+												đăng nhập, mật khẩu đăng nhập hoặc số tài
+												khoản/ thẻ tín dụng ngân hàng. Nếu Quý
+												khách nhận được lời yêu cầu tương tự, xin
+												vui lòng liên hệ với chúng tôi qua Trung
+												tâm dịch vụ Khách Hàng nêu trên.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Ngân hàng cũng khuyến nghị khách hàng chỉ
+												truy cập Ngân hàng trực tuyến HSBC từ
+												trang web ngân hàng. Đừng bao giờ nhấn vào
+												bất kỳ liên kết nào trong thư điện tử để
+												đăng nhập Ngân hàng trực tuyến của quý
+												khách. Thay vào đó, hãy nhập trực tiếp địa
+												chỉ trang web vào thanh địa chỉ trình
+												duyệt để từ đó truy cập ngân hàng trực
+												tuyến của chúng tôi.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												© Bản quyền 2024 thuộc về Ngân hàng TNHH
+												Một thành viên HSBC (Việt Nam). Tất cả các
+												quyền được bảo hộ.
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</footer>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

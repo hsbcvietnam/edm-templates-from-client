@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Template 5</title>
+
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				margin: 0 auto;
+				font-family: Arial, sans-serif;
+				font-size: 16px;
+				line-height: 24px;
+				width: 700px;
+				background: #f3f3f3;
+				color: #333333;
+			}
+			p {
+				font-size: 16px;
+				margin: 16px 0;
+			}
+			/* Common */
+			.button {
+				background: #db0011;
+				padding: 9px 20px 11px 20px;
+				display: inline-block;
+				color: white;
+				cursor: pointer;
+				font-weight: bold;
+			}
+
+			.title_box {
+				font-size: 23px;
+				line-height: 30px;
+			}
+
+			.title_item {
+				font-size: 19px;
+				line-height: 27px;
+			}
+
+			/* Body content */
+			.body_content {
+				border: 1px solid #d7d8d6;
+				background: #ffffff;
+				width: 700px;
+			}
+
+			/* Hero */
+			.hero_logo {
+				padding: 32px 45px;
+			}
+
+			/* Tạo padding */
+			.main_body {
+				padding: 32px 45px;
+			}
+
+			/* Footer */
+			footer {
+				background-color: #e4e8eb;
+			}
+
+			.footer-container {
+				font-size: 16px;
+				line-height: 1.3;
+				color: #000000;
+				background-color: #ededed;
+			}
+
+			.footer-container-main {
+				padding: 16px 0 !important;
+			}
+
+			.content_text_footer {
+				margin: 0;
+				padding: 10px 0 0 0;
+				border: none;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 12px;
+				line-height: 16px;
+				color: #808080;
+			}
+
+			.footer_container {
+				padding: 32px 45px;
+			}
+
+			.line {
+				background: #ffffff;
+			}
+
+			/* Dark mode */
+			@media (prefers-color-scheme: dark) {
+				body {
+					background: #101010 !important;
+				}
+
+				.line {
+					background: #212121 !important;
+				}
+
+				.body_content {
+					color: #ffffff !important;
+					background: #212121 !important;
+					border: 1px solid #767676 !important;
+				}
+
+				.footer-container {
+					background-color: #1d1d1d !important;
+					color: #ffffff !important;
+				}
+
+				.footer_container {
+					background: #333333 !important;
+					color: #ffffff !important;
+				}
+
+				.footer-social {
+					color: #ffffff !important;
+				}
+			}
+
+			/* Mobile */
+			@media (max-width: 768px) {
+				body {
+					width: 100%;
+					background: none !important;
+					padding: 16px;
+				}
+
+				.body_content {
+					border: 1px solid #d7d8d6;
+					width: 100% !important;
+				}
+
+				/* Hero */
+				.hero_logo {
+					padding: 32px 22px;
+				}
+
+				/* Tạo padding */
+				.main_body {
+					padding: 16px 22px 32px 22px;
+				}
+
+				/* Common */
+				.button {
+					width: 100% !important;
+					display: table;
+				}
+
+				/* Content */
+				.item {
+					display: block;
+				}
+
+				.hide-on-mobile {
+					display: none;
+				}
+
+				/* info person */
+				.avt-wrapper {
+					border: 1px solid #d7d8d6 !important;
+				}
+
+				.avt-wrapper,
+				.avt-wrapper tr,
+				.avt-wrapper td {
+					display: block !important;
+					width: 100% !important;
+					max-width: 100% !important;
+				}
+				.avt-info-cell {
+					padding: 24px 12px 16px 12px !important;
+				}
+				.avt-img-cell {
+					padding: 0 !important;
+				}
+				.avt-img-cell img {
+					width: 100% !important;
+					height: auto !important;
+				}
+
+				/* footer */
+				.footer-container-main {
+					padding: 0 32px !important;
+				}
+
+				.stack-column-top {
+					display: block !important;
+					width: 100% !important;
+					max-width: 100% !important;
+					text-align: center;
+					padding: 16px 0 !important;
+					font-size: 14px !important;
+				}
+
+				.stack-column-bottom {
+					display: block !important;
+					width: 100% !important;
+					max-width: 100% !important;
+					text-align: center;
+					border-top: 2px solid #db0011;
+					padding: 16px 0 !important;
+					font-size: 14px !important;
+				}
+
+				.footer_container {
+					padding: 16px 22px !important;
+				}
+			}
+
+			/* Mobile & Dark mode */
+			@media (prefers-color-scheme: dark) and (max-width: 768px) {
+				/* info person */
+				.avt-wrapper {
+					border: 1px solid #767676 !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Pre-header -->
+		<div
+			style="
+				display: none;
+				font-size: 1px;
+				color: #ffffff;
+				line-height: 1px;
+				max-height: 0px;
+				max-width: 0px;
+				opacity: 0;
+				overflow: hidden;
+			"
+		>
+			Chúng tôi có ưu đãi đặc biệt dành cho bạn hôm nay...
+		</div>
+		<!-- Body content -->
+
+		<table
+			class="body_content"
+			border="0"
+			cellpadding="0"
+			cellspacing="0"
+			align="center"
+		>
+			<tr>
+				<td>
+					<!-- Hero -->
+					<div class="hero">
+						<table
+							width="100%"
+							cellpadding="0"
+							cellspacing="0"
+							border="0"
+							class="hero_logo"
+						>
+							<tr>
+								<td align="left" valign="bottom">
+									<img
+										src="image/chs_hsbc_logo.jpg"
+										width="104"
+										height="28"
+										alt=""
+										style="display: block"
+									/>
+								</td>
+								<td align="right" valign="bottom">
+									<img
+										src="image/chs_hsbc_cards.jpg"
+										height="50"
+										alt=""
+										style="display: block"
+									/>
+								</td>
+							</tr>
+						</table>
+						<img
+							src="image/chs_hsbc_key.jpg"
+							height="auto"
+							alt=""
+							width="100%"
+						/>
+					</div>
+					<!-- Bọc padding -->
+					<table>
+						<tr>
+							<td class="main_body">
+								<!-- Intro -->
+								<div class="intro">
+									<b style="font-size: 33px; line-height: 40px"
+										>Lorem ipsum dolor sit amet</b
+									>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit. Aliquam vitae urna euismod, viverra justo
+										at, ullamcorper odio. Quisque id aliquam dui.
+										Morbi at diam vel orci pretium consequat non a
+										turpis.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit. Aliquam vitae urna euismod, viverra justo
+										at, ullamcorper odio.
+									</p>
+
+									<!-- button -->
+									<table>
+										<td height="16"></td>
+									</table>
+									<table
+										role="presentation"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										style="text-align: center"
+										class="button"
+									>
+										<tr>
+											<td bgcolor="#db0011">TÌM HIỂU THÊM</td>
+										</tr>
+									</table>
+								</div>
+
+								<!-- Line -->
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									role="presentation"
+									style="
+										border-collapse: collapse;
+										background-color: #ffffff;
+									"
+									class="line"
+								>
+									<!-- Phần trên: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-bottom: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần Line: 1px duy nhất -->
+									<tr>
+										<td
+											height="1"
+											style="
+												background-color: #d7d8d6;
+												line-height: 1px;
+												font-size: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+
+									<!-- Phần dưới: nội dung hoặc spacer -->
+									<tr>
+										<td
+											style="
+												padding-top: 32px;
+												font-size: 1px;
+												line-height: 1px;
+												mso-line-height-rule: exactly;
+											"
+										>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+
+								<!-- Section info person -->
+								<div>
+									<b class="title_box">Lorem ipsum dolor sit amet</b>
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										role="presentation"
+										style="border-collapse: collapse"
+									>
+										<tr>
+											<td style="font-family: Arial, sans-serif">
+												<!-- Item 1 -->
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													role="presentation"
+													style="border-collapse: collapse"
+												>
+													<tr>
+														<td
+															valign="top"
+															style="
+																padding-right: 16px;
+																padding-top: 16px;
+															"
+														>
+															•
+														</td>
+														<td
+															style="
+																padding-top: 16px;
+																padding-bottom: 16px;
+															"
+														>
+															<p style="margin: 0">
+																Lorem ipsum dolor sit
+																amet, consectetur
+																adipiscing elit. Aliquam
+																vitae urna euismod,
+																viverra justo at,
+																ullamcorper odio. Quisque
+																id aliquam dui. Morbi at
+																diam vel orci pretium
+																consequat non a turpis.
+															</p>
+														</td>
+													</tr>
+												</table>
+
+												<!-- Item 2 -->
+												<table
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													role="presentation"
+													style="border-collapse: collapse"
+												>
+													<tr>
+														<td
+															valign="top"
+															style="padding-right: 16px"
+														>
+															•
+														</td>
+														<td style="padding-bottom: 16px">
+															<p style="margin: 0">
+																Lorem ipsum dolor sit
+																amet, consectetur
+																adipiscing elit. Aliquam
+																vitae urna euismod,
+																viverra justo at,
+																ullamcorper odio. Quisque
+																id aliquam dui. Morbi at
+																diam vel orci pretium
+																consequat non a turpis.
+															</p>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+
+									<!-- button -->
+									<table>
+										<td height="16"></td>
+									</table>
+									<table
+										role="presentation"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										style="text-align: center"
+										class="button"
+									>
+										<tr>
+											<td bgcolor="#db0011">TÌM HIỂU THÊM</td>
+										</tr>
+									</table>
+
+									<!-- Avt + content -->
+									<table
+										role="presentation"
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+										style="border-collapse: collapse"
+									>
+										<tr>
+											<td
+												style="
+													padding-top: 32px;
+													font-size: 0;
+													line-height: 0;
+													mso-line-height-rule: exactly;
+												"
+											>
+												&nbsp;
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<!-- Avatar + Info Wrapper -->
+												<table
+													role="presentation"
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													style="border-collapse: collapse"
+													class="avt-wrapper"
+												>
+													<tr>
+														<!-- Ảnh -->
+														<td
+															class="avt-img-cell"
+															width="150"
+															valign="top"
+															style="padding: 0; margin: 0"
+														>
+															<table
+																role="presentation"
+																width="100%"
+																border="0"
+																cellpadding="0"
+																cellspacing="0"
+																style="
+																	border-collapse: collapse;
+																"
+															>
+																<tr>
+																	<td
+																		style="
+																			padding: 0;
+																			margin: 0;
+																			line-height: 0;
+																			font-size: 0;
+																		"
+																	>
+																		<img
+																			src="image/avt.png"
+																			alt=""
+																			width="150"
+																			style="
+																				display: block;
+																				border: 0;
+																				line-height: 0;
+																				font-size: 0;
+																				height: 150px;
+																				width: auto;
+																			"
+																		/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<!-- Nội dung -->
+														<td
+															class="avt-info-cell"
+															valign="middle"
+															style="
+																padding-left: 20px;
+																margin: 0;
+																vertical-align: middle;
+															"
+														>
+															<strong class="title_item"
+																>Lorem ipsum dolor sit
+																amet Lorem</strong
+															>
+															<p style="margin-bottom: 0">
+																Lorem ipsum dolor sit
+																amet, consectetur
+																adipiscing elit. Aliquam
+																vitae urna euismod,
+																viverra justo at,
+																ullamcorper odio. at,
+																ullamcorper odio at,
+															</p>
+														</td>
+													</tr>
+												</table>
+												<!-- Paragraph dưới -->
+												<table
+													role="presentation"
+													width="100%"
+													border="0"
+													cellpadding="0"
+													cellspacing="0"
+													style="border-collapse: collapse"
+												>
+													<tr>
+														<td style="padding-top: 8px">
+															<p style="margin-bottom: 0">
+																Lorem ipsum dolor sit
+																amet, consectetur
+																adipiscing elit. Aliquam
+																vitae urna euismod,
+																viverra justo at,
+																ullamcorper odio. Quisque
+																id aliquam dui. Morbi at
+																diam vel orci pretium
+																consequat non a turpis.
+															</p>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+					</table>
+
+					<!-- Footer -->
+					<footer>
+						<table
+							width="100%"
+							cellpadding="0"
+							cellspacing="0"
+							class="footer-container"
+						>
+							<tr>
+								<td class="footer-container-main">
+									<table
+										role="presentation"
+										width="100%"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<!-- Cột trái (footer-1) -->
+											<td
+												width="45%"
+												valign="top"
+												align="right"
+												style="padding: 0px 25px 0px 0"
+												class="stack-column-top"
+											>
+												<div style="margin-bottom: 5px">
+													Truy cập
+													<strong>
+														<a
+															href="#"
+															target="_blank"
+															style="
+																color: #db0011;
+																text-decoration: none;
+															"
+														>
+															hsbc.com.vn
+														</a>
+													</strong>
+												</div>
+												<div>
+													<img
+														src="image/chs_img_facebook.jpg"
+														width="12"
+														height="12"
+														alt="facebook"
+														style="vertical-align: middle"
+													/>
+													<a
+														href="#"
+														target="_blank"
+														class="footer-social"
+														title="Liên kết này có thể cho Quý khách truy cập đến trang web khác không phải của HSBC..."
+														style="
+															padding-left: 5px;
+															vertical-align: middle;
+															color: #252525;
+															text-decoration: none;
+															font-size: 12px;
+														"
+													>
+														www.facebook.com/HSBCVietnam
+													</a>
+												</div>
+											</td>
+
+											<!-- Border ngăn cách -->
+											<td
+												class="hide-on-mobile"
+												style="
+													border-left: 3px solid #db0011;
+													padding: 0;
+													margin: 0;
+												"
+											></td>
+
+											<!-- Cột phải (footer-2) -->
+											<td
+												width="53%"
+												valign="top"
+												align="left"
+												style="padding: 0px 0 0px 10px"
+												class="stack-column-bottom"
+											>
+												<div style="margin-bottom: 5px">
+													Gọi
+													<strong>
+														<a
+															href="#"
+															target="_blank"
+															style="
+																color: #db0011;
+																text-decoration: none;
+																padding-left: 5px;
+															"
+														>
+															(84 28) 37 247 247
+														</a>
+													</strong>
+													(miền Nam)
+												</div>
+												<div>
+													Hoặc
+													<strong>
+														<a
+															href="#"
+															target="_blank"
+															style="
+																color: #db0011;
+																text-decoration: none;
+																padding-left: 5px;
+															"
+														>
+															(84 24) 62 707 707
+														</a>
+													</strong>
+													(miền Bắc)
+												</div>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+
+						<table
+							width="100%"
+							border="0"
+							cellpadding="0"
+							cellspacing="0"
+							class="footer_container"
+							style="
+								margin: 0;
+								border: none;
+								font-family: Arial, Helvetica, sans-serif !important;
+								font-size: 16px;
+								line-height: 1.3;
+								color: #000000;
+								background-color: rgb(245, 245, 245);
+							"
+						>
+							<tr>
+								<td>
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td
+												align="left"
+												class="content_text_footer"
+												style="padding: 0"
+											>
+												Thông tin quan trọng:
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Tài liệu này được thiết kế để sử dụng tại
+												Việt Nam. Các sản phẩm và dịch vụ được đề
+												cập trong tài liệu này nhằm phục vụ cho
+												khách hàng tại Việt Nam. Nếu bạn ở ngoài
+												lãnh thổ Việt Nam, chúng tôi có thể không
+												được phép cung cấp cho bạn các sản phẩm và
+												dịch vụ có sẵn thông qua tài liệu này tại
+												quốc gia hoặc khu vực mà bạn đang ở hoặc
+												cư trú. Tài liệu này không nhằm mục đích
+												phân phối hoặc sử dụng bởi bất kỳ cá nhân
+												nào ở bất kỳ khu vực pháp lý, quốc gia
+												hoặc khu vực nào mà việc phân phối hoặc sử
+												dụng tài liệu này bị hạn chế và sẽ không
+												được phép theo luật hoặc quy định.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Tài liệu này được cung cấp bởi Ngân hàng
+												TNHH Một thành viên HSBC Việt Nam (“HSBC
+												Việt Nam”). HSBC Việt Nam chịu sự quản lý
+												của Ngân hàng Nhà nước Việt Nam.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Sở dĩ Quý khách nhận được thư điện tử này
+												bởi vì Quý khách đã chấp thuận cho Ngân
+												hàng TNHH Một thành viên HSBC (Việt Nam)
+												('Ngân hàng, 'của Ngân hàng') gửi đến cho
+												Quý khách các thông tin và chương trình
+												khuyến mãi liên quan đến sản phẩm và dịch
+												vụ của Ngân hàng. Quý khách có quyền chọn
+												lựa không nhận các thông tin và vật phẩm
+												quảng cáo về dịch vụ Ngân hàng bất kỳ lúc
+												nào.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Để ngừng nhận thư điện tử với thông tin
+												quảng cáo của Ngân hàng, Quý khách vui
+												lòng liên hệ Trung tâm Dịch vụ Khách hàng
+												hoặc đến Chi nhánh/Phòng giao dịch gần
+												nhất của Ngân hàng HSBC để được hỗ trợ.
+												Ngoài ra, Quý khách có thể gửi một thư
+												điện tử (với tiêu đề và nội dung bất kỳ)
+												đến
+												<span>unsubscribe</span
+												><span style="display: none">@</span
+												>@<span>hsbc</span>.<span>com</span>.<span
+													>vn</span
+												>
+												từ hộp thư điện tử mà Quý khách mong muốn
+												ngừng nhận quảng cáo của Ngân hàng. Quý
+												khách vui lòng lưu ý rằng yêu cầu của Quý
+												khách sẽ được ghi nhận ngay khi HSBC nhận
+												được thư điện tử và được thực hiện thành
+												công sớm nhất 4 ngày làm việc sau đó. Tuy
+												nhiên, chúng tôi khuyến khích Quý khách
+												duy trì việc nhận thư điện tử để được cập
+												nhật các thông tin về sản phẩm, dịch vụ
+												mới nhất và các ưu đãi đặc quyền dành
+												riêng cho Quý khách.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Thư điện tử này là bảo mật và có thể đã
+												đăng ký bảo mật về pháp lý. Trong trường
+												hợp Quý khách không phải là nguời nhận
+												thư, Quý khách không được phép sao chép,
+												chuyển, tiết lộ hoặc sử dụng bất kỳ nội
+												dung nào của thư điện tử. Trong trường hợp
+												Quý khách nhận thư bị lỗi, vui lòng xóa
+												thư và tất cả các bản sao trong hệ thống
+												của Quý khách.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Xin vui lòng không hồi âm về địa chỉ thư
+												điện tử này. Vui lòng liên hệ Trung tâm
+												dịch vụ Khách Hàng.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Ngân hàng duy trì chuẩn mực và thủ tục bảo
+												mật nghiêm ngặt để ngăn chặn việc sử dụng
+												trái phép thông tin của khách hàng. HSBC
+												không bao giờ liên lạc bằng email hoặc
+												bằng cách khác để yêu cầu khách hàng xác
+												nhận lại những thông tin cá nhân như tên
+												đăng nhập, mật khẩu đăng nhập hoặc số tài
+												khoản/ thẻ tín dụng ngân hàng. Nếu Quý
+												khách nhận được lời yêu cầu tương tự, xin
+												vui lòng liên hệ với chúng tôi qua Trung
+												tâm dịch vụ Khách Hàng nêu trên.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Ngân hàng cũng khuyến nghị khách hàng chỉ
+												truy cập Ngân hàng trực tuyến HSBC từ
+												trang web ngân hàng. Đừng bao giờ nhấn vào
+												bất kỳ liên kết nào trong thư điện tử để
+												đăng nhập Ngân hàng trực tuyến của quý
+												khách. Thay vào đó, hãy nhập trực tiếp địa
+												chỉ trang web vào thanh địa chỉ trình
+												duyệt để từ đó truy cập ngân hàng trực
+												tuyến của chúng tôi.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												© Bản quyền 2024 thuộc về Ngân hàng TNHH
+												Một thành viên HSBC (Việt Nam). Tất cả các
+												quyền được bảo hộ.
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</footer>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

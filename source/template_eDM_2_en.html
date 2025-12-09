@@ -1,0 +1,4912 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Template eDM 2</title>
+
+		<style>
+			* {
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+			}
+
+			body {
+				margin: 0 auto;
+				font-family: Arial, sans-serif;
+				font-size: 16px;
+				line-height: 24px;
+				width: 700px;
+				background: #f3f3f3;
+				color: #333333;
+			}
+
+			p {
+				font-size: 16px;
+				margin: 16px 0;
+			}
+
+			/* Common */
+			.button {
+				background: #db0011;
+				padding: 16px 60px;
+				display: inline-block;
+				color: white;
+				cursor: pointer;
+				font-weight: bold;
+				font-size: 16px;
+			}
+
+			.button-black {
+				background: #000000;
+				padding: 16px 60px;
+				display: inline-block;
+				color: white;
+				cursor: pointer;
+				font-weight: bold;
+				font-size: 16px;
+			}
+
+			/* Use to change dark mode */
+			.font-color {
+				color: #000000;
+			}
+
+			.background-color {
+				background: #ffffff;
+			}
+
+			.border-color {
+				border-color: #333333;
+			}
+
+			.line {
+				background: #ffffff;
+			}
+
+			/* End */
+
+			/* End common CSS */
+			.header-intro {
+				padding-top: 0px;
+				font-size: 33px;
+				color: #000000;
+				line-height: 40px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			/* Part 1 */
+
+			/* Part 2 */
+			.header-part-2 {
+				padding: 0 150px 0 0;
+			}
+
+			.card-content-part-2 {
+				padding-bottom: 32px !important;
+			}
+
+			/* Part 3 */
+			.header-part-3 {
+				padding: 0 170px 0 0 !important;
+				font-size: 24px;
+			}
+
+			/* Part 4 */
+			.header-part-4 {
+				padding: 32px 60px 12px 60px;
+			}
+
+			/* Part 8 */
+			.cell-common-style {
+				padding: 16px;
+				border: 1px solid #333333;
+				box-sizing: border-box;
+				background-color: #ffffff;
+				color: #000000;
+			}
+
+			.cell-middle-style {
+				border-left: none;
+				border-right: none;
+			}
+
+			/* Others CSS */
+			.title_box {
+				font-size: 23px;
+				line-height: 30px;
+			}
+
+			.title_item {
+				font-size: 19px;
+				line-height: 27px;
+			}
+
+			/* Body content */
+			.body_content {
+				border: 1px solid #d7d8d6;
+				background: #ffffff;
+				width: 700px;
+			}
+
+			/* Hero */
+			.hero_logo {
+				padding: 32px 45px;
+			}
+
+			/* Tạo padding */
+			.main_body {
+				padding: 32px 45px;
+			}
+
+			/* Footer */
+			footer {
+				background-color: #e4e8eb;
+			}
+
+			.footer-container {
+				font-size: 16px;
+				line-height: 1.3;
+				color: #000000;
+				background-color: #ededed;
+			}
+
+			.footer-container-main {
+				padding: 16px 0 !important;
+			}
+
+			.content_text_footer {
+				margin: 0;
+				padding: 10px 0 0 0;
+				border: none;
+				font-family: Arial, Helvetica, sans-serif !important;
+				font-size: 12px;
+				line-height: 16px;
+				color: #808080;
+			}
+
+			.footer_container {
+				padding: 32px 45px;
+			}
+
+			/* Dark mode */
+			@media (prefers-color-scheme: dark) {
+				body {
+					background: #101010 !important;
+				}
+
+				/* CSS common */
+				.text-common {
+					color: #ffffff;
+				}
+
+				/* Use to change dark mode */
+				.font-color {
+					color: #ffffff !important;
+				}
+
+				.background-color {
+					background: #212121 !important;
+				}
+
+				.border-color {
+					border-color: #ededed !important;
+				}
+
+				.line {
+					background: #212121 !important;
+				}
+
+				.cell-common-style {
+					border: 1px solid #ededed;
+					background-color: #212121;
+					color: #ffffff;
+				}
+
+				.button {
+					background: #db0011 !important;
+				}
+
+				.button-white {
+					color: #ffffff !important;
+					background-color: #212121 !important;
+					border-color: #ededed !important;
+				}
+
+				/* End */
+
+				/* CSS intro */
+				.header-intro {
+					color: #ffffff;
+				}
+
+				.body_content {
+					color: #ffffff !important;
+					background: #212121 !important;
+					border: 1px solid #767676 !important;
+				}
+
+				.footer-container {
+					background-color: #1d1d1d !important;
+					color: #ffffff !important;
+				}
+
+				.footer_container {
+					background: #333333 !important;
+					color: #ffffff !important;
+				}
+
+				.footer-social {
+					color: #ffffff !important;
+				}
+			}
+
+			/* Mobile */
+			@media (max-width: 768px) {
+				body {
+					width: 100%;
+					padding: 16px;
+				}
+
+				.body_content {
+					border: 1px solid #d7d8d6;
+					width: 100% !important;
+				}
+
+				.desktop {
+					background-image: unset !important;
+				}
+
+				.unset-border {
+					border: unset !important;
+				}
+
+				.mobile {
+					display: block !important;
+				}
+
+				/* Hero */
+				.hero_logo {
+					padding: 32px 22px;
+				}
+
+				/* Tạo padding */
+				.main_body {
+					padding: 16px 22px 32px 22px;
+				}
+
+				/* Common */
+				.title-common {
+					padding-right: 0 !important;
+					padding-left: 0 !important;
+				}
+
+				.button,
+				.button-black {
+					width: 100% !important;
+					display: table;
+				}
+
+				.td-mobile {
+					display: block !important;
+					width: 100% !important;
+					max-width: 100% !important;
+				}
+
+				.td-mobile.none-box img {
+					display: none !important;
+				}
+
+				.button-primary-container {
+					width: 100% !important;
+					max-width: 100% !important;
+				}
+
+				/* Part 1 */
+				.img-part-1 {
+					display: none !important;
+				}
+
+				.text-part-1 {
+					padding: 12px !important;
+				}
+
+				/* Part 2 */
+				.content-part-2 {
+					padding: 32px !important;
+				}
+
+				.header-part-2 {
+					padding: 0 !important;
+				}
+
+				.box_percent_part-2 {
+					padding: 16px 0 !important;
+				}
+
+				.box-description-part-2 {
+					padding: 16px 0 !important;
+				}
+
+				/* Part 3 */
+				.header-part-3 {
+					padding: 0 0 0 0 !important;
+				}
+
+				.img-part-3 {
+					padding: 16px !important;
+				}
+
+				.box-description-part-3 {
+					padding: 12px !important;
+				}
+
+				.content-part-3 {
+					padding-right: 0 !important;
+				}
+
+				/* Part 4 */
+				.header-part-4 {
+					padding: 32px 0 12px 0 !important;
+				}
+
+				.img-header {
+					padding-top: 16px !important;
+				}
+
+				.card-part-4 {
+					padding: 0 16px 16px 16px !important;
+				}
+
+				.content-part-4 {
+					padding: 16px !important;
+				}
+
+				/* Part 5 */
+				.card-part-5,
+				.header-part-5 {
+					padding: 0 !important;
+				}
+
+				.arrow-icon-part-5 {
+					transform: rotate(90deg);
+				}
+
+				/* Part 6 */
+				.header-part-6 {
+					padding: 0 !important;
+				}
+
+				.arrow-icon-part-6 {
+					transform: rotate(90deg) translateX(-100%);
+				}
+
+				.hidden {
+					display: none !important;
+				}
+
+				.hidden-border-card-p-6 {
+					border: unset !important;
+				}
+
+				/* Part 8 */
+				.cell-middle-style {
+					border: 1px solid !important;
+					border-bottom: none !important;
+					border-top: none !important;
+				}
+
+				.top-border {
+					border-top: 1px solid !important;
+				}
+
+				/* Content */
+				.item {
+					display: block;
+				}
+
+				.hide-on-mobile {
+					display: none;
+				}
+
+				/* footer */
+				.footer-container-main {
+					padding: 0 32px !important;
+				}
+
+				.stack-column-top {
+					display: block !important;
+					width: 100% !important;
+					max-width: 100% !important;
+					text-align: center;
+					padding: 16px 0 !important;
+					font-size: 14px !important;
+				}
+
+				.stack-column-bottom {
+					display: block !important;
+					width: 100% !important;
+					max-width: 100% !important;
+					text-align: center;
+					border-top: 2px solid #db0011;
+					padding: 16px 0 !important;
+					font-size: 14px !important;
+				}
+
+				.footer_container {
+					padding: 16px 22px !important;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- Pre-header -->
+		<div
+			style="
+				display: none;
+				font-size: 1px;
+				color: #ffffff;
+				line-height: 1px;
+				max-height: 0px;
+				max-width: 0px;
+				opacity: 0;
+				overflow: hidden;
+			"
+		>
+			Chúng tôi có ưu đãi đặc biệt dành cho bạn hôm nay...
+		</div>
+		<!-- Body content -->
+		<table
+			class="body_content"
+			border="0"
+			cellpadding="0"
+			cellspacing="0"
+			align="center"
+		>
+			<tr>
+				<td>
+					<!-- Hero -->
+					<div class="hero">
+						<table
+							width="100%"
+							cellpadding="0"
+							cellspacing="0"
+							border="0"
+							class="hero_logo"
+						>
+							<tr>
+								<td align="left" valign="bottom">
+									<img
+										src="image/chs_hsbc_logo.jpg"
+										width="104"
+										height="28"
+										alt=""
+										style="display: block"
+									/>
+								</td>
+								<td align="right" valign="bottom">
+									<img
+										src="image/chs_hsbc_cards.jpg"
+										height="50"
+										alt=""
+										style="display: block"
+									/>
+								</td>
+							</tr>
+						</table>
+						<img src="image/chs_key.jpg" height="auto" alt="" width="100%" />
+					</div>
+					<!-- Bọc padding -->
+					<table width="100%" cellpadding="0" cellspacing="0" border="0">
+						<!-- Intro  -->
+						<tr>
+							<td class="main_body">
+								<div class="intro">
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td
+												valign="top"
+												align="left"
+												class="header-intro"
+											>
+												Lorem ipsum dolor sit amet, consectetur
+												adipiscing elit, sed do eiusmod tempo.
+											</td>
+										</tr>
+										<tr>
+											<td
+												align="left"
+												valign="top"
+												style="
+													padding: 16px 0;
+													font-size: 16px;
+													line-height: 1.5;
+												"
+												class="text-common"
+											>
+												Kính gửi Quý khách hàng Premier &lt;Cus
+												Name&gt;,
+											</td>
+										</tr>
+										<tr>
+											<td
+												align="left"
+												valign="top"
+												style="font-size: 16px; line-height: 1.5"
+												class="text-common"
+											>
+												Tại HSBC Premier, chúng tôi luôn nỗ lực
+												không ngừng để hiểu rõ và đáp ứng các nhu
+												cầu tài chính cá nhân của Quý khách. Chúng
+												tôi tự hào cung cấp các giải pháp tài
+												chính đặc biệt, được thiết kế để tối ưu
+												hóa quản lý tài sản và kế hoạch tài chính
+												của Quý khách.
+											</td>
+										</tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!-- Part 1 -->
+						<tr>
+							<td class="main_body">
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+								>
+									<tr>
+										<td
+											style="
+												padding: 0 150px 0 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 23px;
+												font-family: Arial, Helvetica, sans-serif !important;
+												color: #db0011;
+											"
+											class="title-common"
+										>
+											<strong
+												>Sed do eiusmod tempor incididunt ut
+												labore et dolore magna aliqua</strong
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											style="
+												padding: 12px 0 32px 0;
+												margin: 0;
+												border: none;
+												line-height: 1.5;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+											class="font-color"
+										>
+											Nulla fermentum tincidunt augue, suscipit
+											fermentum neque posuere venenatis. Curabitur
+											condimentum diam justo, in dignissim lorem
+											tempus quis. Donec erat ipsum, pulvinar sit
+											amet odio eget,
+										</td>
+									</tr>
+									<!-- Content -->
+									<!-- Row 1 -->
+									<tr>
+										<td
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														width="260"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<img
+															src="image/chs_box_1.jpg"
+															width="100%"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														valign="bottom"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<table
+															width="100%"
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+														>
+															<tr>
+																<td
+																	bgcolor="#ba1110"
+																	style="
+																		padding: 12px;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.5;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																		color: #ffffff;
+																	"
+																	class="text-part-1"
+																>
+																	<strong
+																		style="
+																			font-size: 20px;
+																		"
+																		>Bước 1</strong
+																	><br />
+																	Vestibulum faucibus
+																	elit vitae tellus
+																	maximus, vel ornare
+																	mauris tempus.
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														style="
+															padding: 12px 16px 16px 16px;
+															margin: 0;
+															border: 2px solid #cacaca;
+															border-top: none;
+															line-height: 1.5;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														Nulla fermentum tincidunt augue,
+														suscipit fermentum neque posuere
+														venenatis. Curabitur condimentum
+														diam justo, in dignissim lorem
+														tempus quis. Donec erat ipsum,
+														pulvinar sit amet odio eget,
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<!-- Spacing -->
+									<tr>
+										<td
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											<img
+												src="image/dash.png"
+												width="40"
+												height="auto"
+												alt=""
+												style="display: block"
+											/>
+										</td>
+									</tr>
+									<!-- Row 2 -->
+									<tr>
+										<td
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														width="260"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<img
+															src="image/chs_box_2.jpg"
+															width="100%"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														valign="bottom"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<table
+															width="100%"
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+														>
+															<tr>
+																<td
+																	bgcolor="#ba1110"
+																	style="
+																		padding: 12px;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.5;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																		color: #ffffff;
+																	"
+																	class="text-part-1"
+																>
+																	<strong
+																		style="
+																			font-size: 20px;
+																		"
+																		>Bước 2</strong
+																	><br />
+																	Vestibulum faucibus
+																	elit vitae tellus
+																	maximus, vel ornare
+																	mauris tempus.
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														style="
+															padding: 12px 16px 16px 16px;
+															margin: 0;
+															border: 2px solid #cacaca;
+															border-top: none;
+															line-height: 1.5;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														Nulla fermentum tincidunt augue,
+														suscipit fermentum neque posuere
+														venenatis. Curabitur condimentum
+														diam justo, in dignissim lorem
+														tempus quis. Donec erat ipsum,
+														pulvinar sit amet odio eget,
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<!-- Spacing -->
+									<tr>
+										<td
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											<img
+												src="image/dash.png"
+												width="40"
+												height="auto"
+												alt=""
+												style="display: block"
+											/>
+										</td>
+									</tr>
+									<!-- Row 3 -->
+									<tr>
+										<td
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														width="260"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<img
+															src="image/chs_box_3.jpg"
+															width="100%"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														valign="bottom"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<table
+															width="100%"
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+														>
+															<tr>
+																<td
+																	bgcolor="#ba1110"
+																	style="
+																		padding: 12px;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.5;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																		color: #ffffff;
+																	"
+																	class="text-part-1"
+																>
+																	<strong
+																		style="
+																			font-size: 20px;
+																		"
+																		>Bước 3</strong
+																	><br />
+																	Vestibulum faucibus
+																	elit vitae tellus
+																	maximus, vel ornare
+																	mauris tempus.
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														style="
+															padding: 12px 16px 16px 16px;
+															margin: 0;
+															border: 2px solid #cacaca;
+															border-top: none;
+															line-height: 1.5;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														Nulla fermentum tincidunt augue,
+														suscipit fermentum neque posuere
+														venenatis. Curabitur condimentum
+														diam justo, in dignissim lorem
+														tempus quis. Donec erat ipsum,
+														pulvinar sit amet odio eget,
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<!-- Spacing -->
+									<tr>
+										<td
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 0;
+												font-size: 0;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											<img
+												src="image/dash.png"
+												width="40"
+												height="auto"
+												alt=""
+												style="display: block"
+											/>
+										</td>
+									</tr>
+									<!-- Row 3 -->
+									<tr>
+										<td
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														width="260"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<img
+															src="image/chs_box_4.jpg"
+															width="100%"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														valign="bottom"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<table
+															width="100%"
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+														>
+															<tr>
+																<td
+																	bgcolor="#ba1110"
+																	style="
+																		padding: 12px;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.5;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																		color: #ffffff;
+																	"
+																	class="text-part-1"
+																>
+																	<strong
+																		style="
+																			font-size: 20px;
+																		"
+																		>Bước 4</strong
+																	><br />
+																	Vestibulum faucibus
+																	elit vitae tellus
+																	maximus, vel ornare
+																	mauris tempus.
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														style="
+															padding: 12px 16px 16px 16px;
+															margin: 0;
+															border: 2px solid #cacaca;
+															border-top: none;
+															line-height: 1.5;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														Nulla fermentum tincidunt augue,
+														suscipit fermentum neque posuere
+														venenatis. Curabitur condimentum
+														diam justo, in dignissim lorem
+														tempus quis. Donec erat ipsum,
+														pulvinar sit amet odio eget,
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+								<!-- Button -->
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									style="padding: 32px 0 12px 0"
+								>
+									<tr>
+										<td align="center">
+											<table
+												role="presentation"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+												style="text-align: center"
+												class="button"
+											>
+												<tr>
+													<td>TÌM HIỂU THÊM</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- Spacing -->
+						<tr>
+							<td style="padding: 6px"></td>
+						</tr>
+						<!-- Part 2 -->
+						<tr>
+							<td style="background-color: #ededed" class="main_body">
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+								>
+									<tr>
+										<td
+											style="
+												padding: 0 150px 0 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 23px;
+												font-family: Arial, Helvetica, sans-serif !important;
+												color: #db0011;
+											"
+											class="title-common"
+										>
+											<strong
+												>Sed do eiusmod tempor incididunt ut
+												labore et dolore magna aliqua</strong
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											style="
+												padding: 12px 0 32px 0;
+												margin: 0;
+												border: none;
+												line-height: 1.5;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+												color: #000000 !important;
+											"
+										>
+											Nulla fermentum tincidunt augue, suscipit
+											fermentum neque posuere venenatis. Curabitur
+											condimentum diam justo, in dignissim lorem
+											tempus quis. Donec erat ipsum, pulvinar sit
+											amet odio eget,
+										</td>
+									</tr>
+									<!-- Row 1 -->
+									<tr>
+										<td
+											bgcolor="#730014"
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														valign="top"
+														style="
+															padding: 0 16px;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<table
+															width="100%"
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+															style="
+																border: none;
+																border-collapse: collapse;
+															"
+														>
+															<tr>
+																<td
+																	align="center"
+																	bgcolor="#db0011"
+																	style="
+																		padding: 12px 0
+																			16px 0;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.4;
+																		font-size: 19px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																		color: #ffffff;
+																	"
+																>
+																	<strong
+																		>Sed do eiusmod
+																		tempor</strong
+																	>
+																</td>
+															</tr>
+															<tr>
+																<td
+																	align="left"
+																	style="
+																		padding: 12px 12px
+																			0 12px;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.4;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																		color: #ffffff;
+																	"
+																	class="card-content-part-2"
+																>
+																	Vestibulum faucibus
+																	elit vitae tellus
+																	maximus, vel ornare
+																	mauris tempus. Quisque
+																	nunc nunc, sodales et
+																	mattis ut, pretium et
+																	quam. Vestibulum
+																	faucibus elit vitae
+																	tellus maximus, vel
+																	ornare mauris tempus.
+																	Quisque nunc nunc,
+																	sodales et mattis ut,
+																	pretium et quam
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td
+														width="310"
+														align="left"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<img
+															src="image/chs_box_7.jpg"
+															width="100%"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<!-- Spacing -->
+									<tr>
+										<td style="padding: 16px"></td>
+									</tr>
+									<!-- End spacing -->
+									<!-- Row 2 -->
+									<tr>
+										<td
+											bgcolor="#e0e0e0"
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														valign="top"
+														style="
+															padding: 0 16px;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<table
+															width="100%"
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+															style="
+																border: none;
+																border-collapse: collapse;
+															"
+														>
+															<tr>
+																<td
+																	align="center"
+																	bgcolor="#db0011"
+																	style="
+																		padding: 12px 0
+																			16px 0;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.4;
+																		font-size: 19px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																		color: #ffffff;
+																	"
+																>
+																	<strong
+																		>Sed do eiusmod
+																		tempor</strong
+																	>
+																</td>
+															</tr>
+															<tr>
+																<td
+																	align="left"
+																	style="
+																		padding: 12px 12px
+																			0 12px;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.4;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																		color: #000000;
+																	"
+																	class="card-content-part-2"
+																>
+																	Vestibulum faucibus
+																	elit vitae tellus
+																	maximus, vel ornare
+																	mauris tempus. Quisque
+																	nunc nunc, sodales et
+																	mattis ut, pretium et
+																	quam. Vestibulum
+																	faucibus elit vitae
+																	tellus maximus, vel
+																	ornare mauris tempus.
+																	Quisque nunc nunc,
+																	sodales et mattis ut,
+																	pretium et quam
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td
+														width="310"
+														align="left"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<img
+															src="image/chs_box_8.jpg"
+															width="100%"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<!-- Spacing -->
+									<tr>
+										<td style="padding: 16px"></td>
+									</tr>
+									<!-- End spacing -->
+									<!-- Row 3 -->
+									<tr>
+										<td
+											bgcolor="#730014"
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														valign="top"
+														style="
+															padding: 0 16px;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<table
+															width="100%"
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+															style="
+																border: none;
+																border-collapse: collapse;
+															"
+														>
+															<tr>
+																<td
+																	align="center"
+																	bgcolor="#db0011"
+																	style="
+																		padding: 12px 0
+																			16px 0;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.4;
+																		font-size: 19px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																		color: #ffffff;
+																	"
+																>
+																	<strong
+																		>Sed do eiusmod
+																		tempor</strong
+																	>
+																</td>
+															</tr>
+															<tr>
+																<td
+																	align="left"
+																	style="
+																		padding: 12px 12px
+																			0 12px;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.4;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																		color: #ffffff;
+																	"
+																	class="card-content-part-2"
+																>
+																	Vestibulum faucibus
+																	elit vitae tellus
+																	maximus, vel ornare
+																	mauris tempus. Quisque
+																	nunc nunc, sodales et
+																	mattis ut, pretium et
+																	quam. Vestibulum
+																	faucibus elit vitae
+																	tellus maximus, vel
+																	ornare mauris tempus.
+																	Quisque nunc nunc,
+																	sodales et mattis ut,
+																	pretium et quam
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td
+														width="310"
+														align="left"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<img
+															src="image/chs_box_9.jpg"
+															width="100%"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<!-- Spacing -->
+									<tr>
+										<td style="padding: 16px"></td>
+									</tr>
+									<!-- End spacing -->
+									<!-- Row 4 -->
+									<tr>
+										<td
+											bgcolor="#e0e0e0"
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														bgcolor="#e0e0e0"
+														valign="top"
+														style="
+															padding: 0 16px;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<table
+															width="100%"
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+															style="
+																border: none;
+																border-collapse: collapse;
+															"
+														>
+															<tr>
+																<td
+																	align="center"
+																	bgcolor="#db0011"
+																	style="
+																		padding: 12px 0
+																			16px 0;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.4;
+																		font-size: 19px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																		color: #ffffff;
+																	"
+																>
+																	<strong
+																		>Sed do eiusmod
+																		tempor</strong
+																	>
+																</td>
+															</tr>
+															<tr>
+																<td
+																	bgcolor="#e0e0e0"
+																	align="left"
+																	style="
+																		padding: 12px 12px
+																			0 12px;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.4;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																		color: #000000;
+																	"
+																	class="card-content-part-2"
+																>
+																	Vestibulum faucibus
+																	elit vitae tellus
+																	maximus, vel ornare
+																	mauris tempus. Quisque
+																	nunc nunc, sodales et
+																	mattis ut, pretium et
+																	quam. Vestibulum
+																	faucibus elit vitae
+																	tellus maximus, vel
+																	ornare mauris tempus.
+																	Quisque nunc nunc,
+																	sodales et mattis ut,
+																	pretium et quam
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td
+														width="310"
+														align="left"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="td-mobile"
+													>
+														<img
+															src="image/chs_box_10.jpg"
+															width="100%"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+								<!-- Button -->
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+									style="padding: 32px 0 12px 0"
+								>
+									<tr>
+										<td align="center">
+											<table
+												role="presentation"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+												style="text-align: center"
+												class="button"
+											>
+												<tr>
+													<td bgcolor="#db0011">
+														TÌM HIỂU THÊM
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- Part 3 -->
+						<tr>
+							<td class="main_body">
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+								>
+									<tr>
+										<td
+											style="
+												padding: 0 150px 0 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 23px;
+												font-family: Arial, Helvetica, sans-serif !important;
+												color: #db0011;
+											"
+											class="title-common"
+										>
+											<strong
+												>Sed do eiusmod tempor incididunt ut
+												labore et dolore magna aliqua</strong
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											style="
+												padding: 12px 0 0 0;
+												margin: 0;
+												border: none;
+												line-height: 1.5;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+											class="font-color"
+										>
+											Nulla fermentum tincidunt augue, suscipit
+											fermentum neque posuere venenatis. Curabitur
+											condimentum diam justo, in dignissim lorem
+											tempus quis. Donec erat ipsum, pulvinar sit
+											amet odio eget,
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td
+								align="left"
+								style="
+									padding: 0;
+									margin: 0;
+									border: none;
+									line-height: 1.3;
+									font-size: 16px;
+									font-family: Arial, Helvetica, sans-serif !important;
+								"
+							>
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+								>
+									<tr>
+										<td
+											width="232"
+											align="left"
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+											class="td-mobile"
+										>
+											<img
+												src="image/chs_box_11.jpg"
+												width="100%"
+												height="auto"
+												alt=""
+												style="display: block"
+											/>
+										</td>
+										<td
+											align="left"
+											bgcolor="#f1f1f1"
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+												color: #000000;
+											"
+											class="td-mobile box-description-part-3"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														width="30"
+														align="center"
+														valign="top"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 14px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&bull;
+													</td>
+													<td
+														align="left"
+														valign="top"
+														style="
+															padding: 0 40px 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.4;
+															font-size: 14px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="content-part-3"
+													>
+														Nulla fermentum tincidunt augue,
+														suscipit fermentum neque posuere
+														venenatis. Curabitur condimentum
+														diam justo, in dignissim lorem
+														tempus quis.
+													</td>
+												</tr>
+												<tr>
+													<td
+														align="center"
+														valign="top"
+														style="
+															padding: 12px 0 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 14px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&bull;
+													</td>
+													<td
+														align="left"
+														valign="top"
+														style="
+															padding: 12px 40px 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.4;
+															font-size: 14px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="content-part-3"
+													>
+														Nulla fermentum tincidunt augue,
+														suscipit fermentum neque posuere
+														venenatis. Curabitur condimentum
+														diam justo, in dignissim lorem
+														tempus quis.
+													</td>
+												</tr>
+												<tr>
+													<td
+														align="center"
+														valign="top"
+														style="
+															padding: 12px 0 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 14px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													></td>
+													<td
+														align="center"
+														valign="top"
+														style="
+															padding: 12px 0 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 14px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<!-- Button -->
+														<table
+															width="100%"
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+															style="padding: 0"
+														>
+															<tr>
+																<td align="left">
+																	<table
+																		role="presentation"
+																		border="0"
+																		cellpadding="0"
+																		cellspacing="0"
+																		style="
+																			text-align: center;
+																		"
+																		class="button"
+																	>
+																		<tr>
+																			<td
+																				bgcolor="#db0011"
+																			>
+																				TÌM HIỂU
+																				THÊM
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- Spacing -->
+						<tr>
+							<td style="padding: 16px"></td>
+						</tr>
+						<tr>
+							<td
+								align="left"
+								style="
+									padding: 0;
+									margin: 0;
+									border: none;
+									line-height: 1.3;
+									font-size: 16px;
+									font-family: Arial, Helvetica, sans-serif !important;
+								"
+							>
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+								>
+									<tr>
+										<td
+											width="232"
+											align="left"
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+											class="td-mobile"
+										>
+											<img
+												src="image/chs_box_12.jpg"
+												width="100%"
+												height="auto"
+												alt=""
+												style="display: block"
+											/>
+										</td>
+										<td
+											align="left"
+											bgcolor="#f1f1f1"
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+												color: #000000;
+											"
+											class="td-mobile box-description-part-3"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														width="30"
+														align="center"
+														valign="top"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 14px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&bull;
+													</td>
+													<td
+														align="left"
+														valign="top"
+														style="
+															padding: 0 40px 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.4;
+															font-size: 14px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="content-part-3"
+													>
+														Nulla fermentum tincidunt augue,
+														suscipit fermentum neque posuere
+														venenatis. Curabitur condimentum
+														diam justo, in dignissim lorem
+														tempus quis.
+													</td>
+												</tr>
+												<tr>
+													<td
+														align="center"
+														valign="top"
+														style="
+															padding: 12px 0 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 14px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&bull;
+													</td>
+													<td
+														align="left"
+														valign="top"
+														style="
+															padding: 12px 40px 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.4;
+															font-size: 14px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+														class="content-part-3"
+													>
+														Nulla fermentum tincidunt augue,
+														suscipit fermentum neque posuere
+														venenatis. Curabitur condimentum
+														diam justo, in dignissim lorem
+														tempus quis.
+													</td>
+												</tr>
+												<tr>
+													<td
+														align="center"
+														valign="top"
+														style="
+															padding: 12px 0 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 14px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													></td>
+													<td
+														align="center"
+														valign="top"
+														style="
+															padding: 12px 0 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 14px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<!-- Button -->
+														<table
+															width="100%"
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+															style="padding: 0"
+														>
+															<tr>
+																<td align="left">
+																	<table
+																		role="presentation"
+																		border="0"
+																		cellpadding="0"
+																		cellspacing="0"
+																		style="
+																			text-align: center;
+																		"
+																		class="button"
+																	>
+																		<tr>
+																			<td
+																				bgcolor="#db0011"
+																			>
+																				TÌM HIỂU
+																				THÊM
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- Spacing -->
+						<tr>
+							<td style="padding: 20px"></td>
+						</tr>
+						<!-- Part 4 -->
+						<tr>
+							<td bgcolor="#730014">
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+								>
+									<tr>
+										<td
+											align="center"
+											valign="middle"
+											style="
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+											class="main_body"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														style="
+															padding: 0 150px 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 23px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #ffffff;
+														"
+														class="title-common"
+													>
+														<strong
+															>Sed do eiusmod tempor
+															incididunt ut labore et dolore
+															magna aliqua</strong
+														>
+													</td>
+												</tr>
+												<tr>
+													<td
+														style="
+															padding: 12px 0 24px 0;
+															margin: 0;
+															border: none;
+															line-height: 1.5;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #ffffff;
+														"
+													>
+														Nulla fermentum tincidunt augue,
+														suscipit fermentum neque posuere
+														venenatis. Curabitur condimentum
+														diam justo, in dignissim lorem
+														tempus quis. Donec erat ipsum,
+														pulvinar sit amet odio eget,
+													</td>
+												</tr>
+												<tr>
+													<td
+														bgcolor="#FFFFFF"
+														style="
+															padding: 24px 0;
+															margin: 0;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #ffffff;
+														"
+														class="background-color"
+													>
+														<table
+															width="100%"
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+														>
+															<tr>
+																<td
+																	width="23"
+																	align="left"
+																	style="
+																		padding: 0;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.3;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																	"
+																>
+																	<img
+																		src="image/chs_box_14.png"
+																		width="23"
+																		height="auto"
+																		alt=""
+																		style="
+																			display: block;
+																		"
+																	/>
+																</td>
+																<td
+																	style="
+																		padding: 0 12px;
+																		margin: 0;
+																		border: none;
+																		line-height: 1.3;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																	"
+																>
+																	<table
+																		width="100%"
+																		border="0"
+																		cellpadding="0"
+																		cellspacing="0"
+																	>
+																		<tr>
+																			<td
+																				align="center"
+																				style="
+																					padding: 0;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.3;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																					color: #000000;
+																				"
+																				class="td-mobile font-color"
+																			>
+																				<strong
+																					style="
+																						font-size: 80px;
+																					"
+																					>20</strong
+																				><strong
+																					style="
+																						font-size: 44px;
+																					"
+																					>%</strong
+																				>
+																			</td>
+																			<td
+																				width="420"
+																				style="
+																					padding: 0;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.5;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																					color: #000000;
+																				"
+																				class="td-mobile font-color"
+																			>
+																				Vestibulum
+																				faucibus
+																				elit vitae
+																				tellus
+																				maximus,
+																				vel ornare
+																				mauris
+																				tempus.
+																				Quisque
+																				nunc nunc,
+																				sodales et
+																				mattis ut,
+																				pretium et
+																				quam.
+																				Vestibulum
+																				faucibus
+																				elit vitae
+																				tellus
+																				maximus,
+																				vel ornare
+																				mauris
+																				tempus.
+																				Quisque
+																				nunc nunc,
+																				sodales et
+																				mattis ut,
+																				pretium et
+																				quam
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<!-- Spacing -->
+												<tr>
+													<td style="padding: 12px"></td>
+												</tr>
+												<!-- End spacing -->
+												<tr>
+													<td
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #ffffff;
+														"
+													>
+														<table
+															width="100%"
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+														>
+															<tr>
+																<!-- Col 1 -->
+																<td
+																	width="23%"
+																	bgcolor="#FFFFFF"
+																	style="
+																		padding: 0;
+																		margin: 0;
+																		line-height: 1.3;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																	"
+																	class="background-color td-mobile"
+																>
+																	<table
+																		width="100%"
+																		border="0"
+																		cellpadding="0"
+																		cellspacing="0"
+																	>
+																		<tr>
+																			<td
+																				align="center"
+																				style="
+																					padding: 0;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.3;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																				"
+																			>
+																				<img
+																					src="image/chs_box_15.png"
+																					width="61"
+																					height="auto"
+																					alt=""
+																					style="
+																						display: block;
+																					"
+																				/>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td
+																				align="center"
+																				style="
+																					padding: 0;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.3;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																					color: #000000;
+																				"
+																				class="font-color"
+																			>
+																				<strong
+																					style="
+																						font-size: 60px;
+																					"
+																					>10</strong
+																				><strong
+																					style="
+																						font-size: 32px;
+																					"
+																					>%</strong
+																				>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td
+																				align="left"
+																				style="
+																					padding: 0
+																						10px
+																						10px
+																						10px;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.5;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																					color: #000000;
+																				"
+																				class="font-color"
+																			>
+																				Vestibulum
+																				faucibus
+																				elit vitae
+																				tellus
+																				maximus,
+																				vel ornare
+																				mauris
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+																<!-- Spacing -->
+																<td
+																	style="padding: 6px"
+																	class="td-mobile"
+																></td>
+																<!-- Col 2 -->
+																<td
+																	width="23%"
+																	bgcolor="#FFFFFF"
+																	style="
+																		padding: 0;
+																		margin: 0;
+																		line-height: 1.3;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																	"
+																	class="background-color td-mobile"
+																>
+																	<table
+																		width="100%"
+																		border="0"
+																		cellpadding="0"
+																		cellspacing="0"
+																	>
+																		<tr>
+																			<td
+																				align="center"
+																				style="
+																					padding: 0;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.3;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																				"
+																			>
+																				<img
+																					src="image/chs_box_16.png"
+																					width="61"
+																					height="auto"
+																					alt=""
+																					style="
+																						display: block;
+																					"
+																				/>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td
+																				align="center"
+																				style="
+																					padding: 0;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.3;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																					color: #000000;
+																				"
+																				class="font-color"
+																			>
+																				<strong
+																					style="
+																						font-size: 60px;
+																					"
+																					>20</strong
+																				><strong
+																					style="
+																						font-size: 32px;
+																					"
+																					>%</strong
+																				>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td
+																				align="left"
+																				style="
+																					padding: 0
+																						10px
+																						10px
+																						10px;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.5;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																					color: #000000;
+																				"
+																				class="font-color"
+																			>
+																				Vestibulum
+																				faucibus
+																				elit vitae
+																				tellus
+																				maximus,
+																				vel ornare
+																				mauris
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+																<!-- Spacing -->
+																<td
+																	style="padding: 6px"
+																	class="td-mobile"
+																></td>
+																<!-- Col 3 -->
+																<td
+																	width="23%"
+																	bgcolor="#FFFFFF"
+																	style="
+																		padding: 0;
+																		margin: 0;
+																		line-height: 1.3;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																	"
+																	class="background-color td-mobile"
+																>
+																	<table
+																		width="100%"
+																		border="0"
+																		cellpadding="0"
+																		cellspacing="0"
+																	>
+																		<tr>
+																			<td
+																				align="center"
+																				style="
+																					padding: 0;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.3;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																				"
+																			>
+																				<img
+																					src="image/chs_box_17.png"
+																					width="61"
+																					height="auto"
+																					alt=""
+																					style="
+																						display: block;
+																					"
+																				/>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td
+																				align="center"
+																				style="
+																					padding: 0;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.3;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																					color: #000000;
+																				"
+																				class="font-color"
+																			>
+																				<strong
+																					style="
+																						font-size: 60px;
+																					"
+																					>30</strong
+																				><strong
+																					style="
+																						font-size: 32px;
+																					"
+																					>%</strong
+																				>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td
+																				align="left"
+																				style="
+																					padding: 0
+																						10px
+																						10px
+																						10px;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.5;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																					color: #000000;
+																				"
+																				class="font-color"
+																			>
+																				Vestibulum
+																				faucibus
+																				elit vitae
+																				tellus
+																				maximus,
+																				vel ornare
+																				mauris
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+																<!-- Spacing -->
+																<td
+																	style="padding: 6px"
+																	class="td-mobile"
+																></td>
+																<!-- Col 4 -->
+																<td
+																	width="23%"
+																	bgcolor="#FFFFFF"
+																	style="
+																		padding: 0;
+																		margin: 0;
+																		line-height: 1.3;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																	"
+																	class="background-color td-mobile"
+																>
+																	<table
+																		width="100%"
+																		border="0"
+																		cellpadding="0"
+																		cellspacing="0"
+																	>
+																		<tr>
+																			<td
+																				align="center"
+																				style="
+																					padding: 0;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.3;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																				"
+																			>
+																				<img
+																					src="image/chs_box_18.png"
+																					width="61"
+																					height="auto"
+																					alt=""
+																					style="
+																						display: block;
+																					"
+																				/>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td
+																				align="center"
+																				style="
+																					padding: 0;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.3;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																					color: #000000;
+																				"
+																				class="font-color"
+																			>
+																				<strong
+																					style="
+																						font-size: 60px;
+																					"
+																					>40</strong
+																				><strong
+																					style="
+																						font-size: 32px;
+																					"
+																					>%</strong
+																				>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td
+																				align="left"
+																				style="
+																					padding: 0
+																						10px
+																						10px
+																						10px;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.5;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																					color: #000000;
+																				"
+																				class="font-color"
+																			>
+																				Vestibulum
+																				faucibus
+																				elit vitae
+																				tellus
+																				maximus,
+																				vel ornare
+																				mauris
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+											<!-- Button -->
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+												style="padding: 0"
+											>
+												<tr>
+													<td
+														style="padding: 32px 0 0 0"
+														align="center"
+													>
+														<table
+															role="presentation"
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+															style="text-align: center"
+															class="button-black"
+														>
+															<tr>
+																<td bgcolor="#000000">
+																	TÌM HIỂU THÊM
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- Part 5-A -->
+						<tr>
+							<td class="main_body">
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+								>
+									<tr>
+										<td
+											style="
+												padding: 0 150px 0 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 23px;
+												font-family: Arial, Helvetica, sans-serif !important;
+												color: #db0011;
+											"
+											class="title-common"
+										>
+											<strong
+												>Sed do eiusmod tempor incididunt ut
+												labore et dolore magna aliqua</strong
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											style="
+												padding: 12px 0 32px 0;
+												margin: 0;
+												border: none;
+												line-height: 1.5;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+											class="font-color"
+										>
+											Nulla fermentum tincidunt augue, suscipit
+											fermentum neque posuere venenatis. Curabitur
+											condimentum diam justo, in dignissim lorem
+											tempus quis. Donec erat ipsum, pulvinar sit
+											amet odio eget,
+										</td>
+									</tr>
+									<tr>
+										<td
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														align="center"
+														bgcolor="#ba1110"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #ffffff;
+															text-transform: uppercase;
+														"
+													>
+														<strong>Currency</strong>
+													</td>
+													<td
+														width="50"
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/chs_box_20.jpg"
+															width="35"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														bgcolor="#ba1110"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #ffffff;
+															text-transform: uppercase;
+														"
+													>
+														<strong
+															>Threshold
+															<sup style="font-size: 12px"
+																>(*)</sup
+															></strong
+														>
+													</td>
+												</tr>
+												<!-- Spacing -->
+												<tr>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #000000;
+														"
+													>
+														&nbsp;
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #000000;
+														"
+													>
+														<img
+															src="image/dash.png"
+															width="15"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #000000;
+														"
+													>
+														&nbsp;
+													</td>
+												</tr>
+												<!-- End spacing -->
+												<tr>
+													<td
+														align="center"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															border: 1px solid #ba1110;
+
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															text-transform: uppercase;
+														"
+													>
+														<strong>USD</strong>
+													</td>
+													<td
+														width="50"
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/chs_box_20.jpg"
+															width="35"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															border: 1px solid #ba1110;
+
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<strong>above 30,000</strong>
+													</td>
+												</tr>
+												<!-- Spacing -->
+												<tr>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #000000;
+														"
+													>
+														&nbsp;
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #000000;
+														"
+													>
+														<img
+															src="image/dash.png"
+															width="15"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #000000;
+														"
+													>
+														&nbsp;
+													</td>
+												</tr>
+												<!-- End spacing -->
+												<tr>
+													<td
+														align="center"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															border: 1px solid #ba1110;
+
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															text-transform: uppercase;
+														"
+													>
+														<strong>USD</strong>
+													</td>
+													<td
+														width="50"
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/chs_box_20.jpg"
+															width="35"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															border: 1px solid #ba1110;
+
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<strong>above 30,000</strong>
+													</td>
+												</tr>
+												<!-- Spacing -->
+												<tr>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&nbsp;
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/dash.png"
+															width="15"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&nbsp;
+													</td>
+												</tr>
+												<!-- End spacing -->
+												<tr>
+													<td
+														align="center"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															border: 1px solid #ba1110;
+
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															text-transform: uppercase;
+														"
+													>
+														<strong
+															>GBP, EUR, AUD, CAD, SGD,
+															CHF</strong
+														>
+													</td>
+													<td
+														width="50"
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/chs_box_20.jpg"
+															width="35"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															border: 1px solid #ba1110;
+
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<strong>above 10,000</strong>
+													</td>
+												</tr>
+												<!-- Spacing -->
+												<tr>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&nbsp;
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/dash.png"
+															width="15"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&nbsp;
+													</td>
+												</tr>
+												<!-- End spacing -->
+												<tr>
+													<td
+														align="center"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															border: 1px solid #ba1110;
+
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															text-transform: uppercase;
+														"
+													>
+														<strong>HKD</strong>
+													</td>
+													<td
+														width="50"
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/chs_box_20.jpg"
+															width="35"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															border: 1px solid #ba1110;
+
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<strong>above 100,000</strong>
+													</td>
+												</tr>
+												<!-- Spacing -->
+												<tr>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&nbsp;
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/dash.png"
+															width="15"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&nbsp;
+													</td>
+												</tr>
+												<!-- End spacing -->
+												<tr>
+													<td
+														align="center"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															border: 1px solid #ba1110;
+
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															text-transform: uppercase;
+														"
+													>
+														<strong>JPY</strong>
+													</td>
+													<td
+														width="50"
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/chs_box_20.jpg"
+															width="35"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															border: 1px solid #ba1110;
+
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<strong>above 1,000,000</strong>
+													</td>
+												</tr>
+												<!-- Spacing -->
+												<tr>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&nbsp;
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/dash.png"
+															width="15"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&nbsp;
+													</td>
+												</tr>
+												<!-- End spacing -->
+												<tr>
+													<td
+														align="center"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															border: 1px solid #ba1110;
+
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															text-transform: uppercase;
+														"
+													>
+														<strong>OTHERS</strong>
+													</td>
+													<td
+														width="50"
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/chs_box_20.jpg"
+															width="35"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														style="
+															padding: 5px 0;
+															margin: 0;
+															border: 1px solid #ba1110;
+
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<strong
+															>Contact PRM for more
+															detais</strong
+														>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+
+						<!-- Part 5-B -->
+						<tr>
+							<td class="main_body">
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+								>
+									<tr>
+										<td
+											style="
+												padding: 0 150px 0 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 23px;
+												font-family: Arial, Helvetica, sans-serif !important;
+												color: #db0011;
+											"
+											class="title-common"
+										>
+											<strong
+												>Sed do eiusmod tempor incididunt ut
+												labore et dolore magna aliqua</strong
+											>
+										</td>
+									</tr>
+									<tr>
+										<td
+											style="
+												padding: 12px 0 32px 0;
+												margin: 0;
+												border: none;
+												line-height: 1.5;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+											class="font-color"
+										>
+											Nulla fermentum tincidunt augue, suscipit
+											fermentum neque posuere venenatis. Curabitur
+											condimentum diam justo, in dignissim lorem
+											tempus quis. Donec erat ipsum, pulvinar sit
+											amet odio eget,
+										</td>
+									</tr>
+									<tr>
+										<td
+											style="
+												padding: 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<!-- Header -->
+												<tr>
+													<td
+														width="45%"
+														align="right"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #000000;
+														"
+													>
+														<table
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+															class="chs_body"
+														>
+															<tr>
+																<td
+																	bgcolor="#e7e7e7"
+																	style="
+																		padding: 5px;
+																		margin: 0;
+
+																		line-height: 1.3;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																	"
+																>
+																	<table
+																		width="100%"
+																		border="0"
+																		cellpadding="0"
+																		cellspacing="0"
+																		class="chs_body"
+																	>
+																		<tr>
+																			<td
+																				width="32"
+																				bgcolor="#ba1110"
+																				style="
+																					padding: 0;
+																					margin: 0;
+
+																					line-height: 1.3;
+																					font-size: 1px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																				"
+																			>
+																				<img
+																					src="image/dash.png"
+																					width="32"
+																					height="auto"
+																					alt=""
+																					style="
+																						display: block;
+																					"
+																				/>
+																			</td>
+																			<td
+																				style="
+																					padding: 0
+																						10px
+																						0
+																						10px;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.3;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																					color: #ba1110;
+																					text-transform: uppercase;
+																				"
+																			>
+																				<strong
+																					>Currency
+																				</strong>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td
+														width="50"
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&nbsp;
+													</td>
+													<td
+														width="45%"
+														align="left"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #000000;
+														"
+													>
+														<table
+															border="0"
+															cellpadding="0"
+															cellspacing="0"
+															class="chs_body"
+														>
+															<tr>
+																<td
+																	bgcolor="#e7e7e7"
+																	style="
+																		padding: 5px;
+																		margin: 0;
+
+																		line-height: 1.3;
+																		font-size: 16px;
+																		font-family: Arial,
+																			Helvetica,
+																			sans-serif !important;
+																	"
+																>
+																	<table
+																		width="100%"
+																		border="0"
+																		cellpadding="0"
+																		cellspacing="0"
+																		class="chs_body"
+																	>
+																		<tr>
+																			<td
+																				width="32"
+																				bgcolor="#ba1110"
+																				style="
+																					padding: 0;
+																					margin: 0;
+
+																					line-height: 1.3;
+																					font-size: 1px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																				"
+																			>
+																				<img
+																					src="image/dash.png"
+																					width="32"
+																					height="auto"
+																					alt=""
+																					style="
+																						display: block;
+																					"
+																				/>
+																			</td>
+																			<td
+																				style="
+																					padding: 0
+																						10px
+																						0
+																						10px;
+																					margin: 0;
+																					border: none;
+																					line-height: 1.3;
+																					font-size: 16px;
+																					font-family: Arial,
+																						Helvetica,
+																						sans-serif !important;
+																					color: #ba1110;
+																					text-transform: uppercase;
+																				"
+																			>
+																				<strong
+																					>Threshold
+																					<sup
+																						style="
+																							font-size: 12px;
+																						"
+																						class="hidden"
+																						>(*)</sup
+																					></strong
+																				>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<!-- Spacing -->
+												<tr>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&nbsp;
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/dash.png"
+															width="15"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														style="
+															padding: 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 1px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&nbsp;
+													</td>
+												</tr>
+												<!-- Content -->
+												<!-- Row 1 -->
+												<tr>
+													<td
+														align="right"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															text-transform: uppercase;
+															color: #000000;
+														"
+													>
+														<strong>USD</strong>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/chs_box_21.png"
+															width="7"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #000000;
+														"
+													>
+														<strong>above 30,000</strong>
+													</td>
+												</tr>
+												<!-- Row 2 -->
+												<tr>
+													<td
+														align="right"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															text-transform: uppercase;
+															color: #000000;
+														"
+													>
+														<strong
+															>GBP, EUR, AUD, CAD, SGD, CHF
+														</strong>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/chs_box_21.png"
+															width="7"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #000000;
+														"
+													>
+														<strong>above 10,000</strong>
+													</td>
+												</tr>
+												<!-- Row 3 -->
+												<tr>
+													<td
+														align="right"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															text-transform: uppercase;
+															color: #000000;
+														"
+													>
+														<strong>HKD</strong>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/chs_box_21.png"
+															width="7"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #000000;
+														"
+													>
+														<strong>above 100,000</strong>
+													</td>
+												</tr>
+												<!-- Row 4 -->
+												<tr>
+													<td
+														align="right"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															text-transform: uppercase;
+															color: #000000;
+														"
+													>
+														<strong>JPY</strong>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/chs_box_21.png"
+															width="7"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #000000;
+														"
+													>
+														<strong>above 1,000,000</strong>
+													</td>
+												</tr>
+												<!-- Row 5 -->
+												<tr>
+													<td
+														align="right"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															text-transform: uppercase;
+															color: #000000;
+														"
+													>
+														<strong>OTHERS</strong>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														<img
+															src="image/chs_box_21.png"
+															width="7"
+															height="auto"
+															alt=""
+															style="display: block"
+														/>
+													</td>
+													<td
+														align="center"
+														valign="middle"
+														bgcolor="#f3f3f3"
+														style="
+															padding: 12px 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #000000;
+														"
+													>
+														<strong
+															>Contact PRM for more
+															detais</strong
+														>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+
+						<!-- End part -->
+						<tr>
+							<td
+								align="center"
+								style="
+									padding: 32px 40px;
+									margin: 0;
+									border: none;
+									line-height: 1.5;
+									font-size: 16px;
+									font-family: Arial, Helvetica, sans-serif !important;
+								"
+								class="background-color font-color"
+							>
+								Vestibulum faucibus elit vitae tellus maximus, vel ornare
+								mauris tempus. Quisque nunc nunc, sodales et mattis ut,
+								pretium et quam. Vestibulum faucibus elit
+							</td>
+						</tr>
+						<tr>
+							<td
+								bgcolor="#730014"
+								style="
+									padding: 0;
+									margin: 0;
+									border: none;
+									line-height: 1.3;
+									font-size: 16px;
+									font-family: Arial, Helvetica, sans-serif !important;
+								"
+							>
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+								>
+									<tr>
+										<td
+											height="235"
+											align="center"
+											valign="middle"
+											style="
+												background-image: url('image/chs_box_19.jpg');
+												background-size: cover;
+												background-repeat: no-repeat;
+												background-position: center center;
+												padding: 0 40px;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 16px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+											class="desktop"
+										>
+											<table
+												width="100%"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+											>
+												<tr>
+													<td
+														valign="middle"
+														align="center"
+														width="50%"
+														style="
+															padding: 0 24px 0 0;
+															margin: 0;
+															border-right: 1px solid
+																#ffffff;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #ffffff;
+														"
+														class="td-mobile unset-border"
+													>
+														Vestibulum faucibus elit vitae
+														tellus maximus, vel ornare mauris
+														tempus. Quisque nunc nunc, sodales
+														et mattis ut, pretium et
+													</td>
+													<td
+														style="padding: 6px"
+														class="td-mobile"
+													></td>
+													<td
+														valign="middle"
+														align="center"
+														style="
+															padding: 0 0 24px;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 16px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+															color: #ffffff;
+														"
+														class="td-mobile"
+													>
+														Staff: &lt;name staff&gt;
+														<br />
+														Email: &lt;email staff&gt;
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td
+								style="
+									padding: 0 40px 32px 40px;
+									margin: 0;
+									border: none;
+									line-height: 1.3;
+									font-size: 12px;
+									font-family: Arial, Helvetica, sans-serif !important;
+								"
+							>
+								<table
+									width="100%"
+									border="0"
+									cellpadding="0"
+									cellspacing="0"
+								>
+									<tr>
+										<td
+											align="left"
+											style="
+												padding: 32px 0 0 0;
+												margin: 0;
+												border: none;
+												line-height: 1.3;
+												font-size: 12px;
+												font-family: Arial, Helvetica, sans-serif !important;
+											"
+										>
+											Theo quy định của Ngân hàng Nhà nước Việt Nam,
+											Quý khách vui lòng không sử dụng Thẻ Tín Dụng
+											HSBC cho các mục đích sau:
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<table>
+												<tr>
+													<td
+														width="10"
+														valign="top"
+														align="left"
+														style="
+															padding: 5px 0 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 12px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&bull;
+													</td>
+													<td
+														valign="top"
+														align="left"
+														style="
+															padding: 5px 0 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 12px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														Rút tiền mặt thay cho giao dịch
+														mua bán hàng hóa hoặc cung ứng
+														dịch vụ tại nơi chấp nhận thanh
+														toán Thẻ
+													</td>
+												</tr>
+												<tr>
+													<td
+														valign="top"
+														align="left"
+														style="
+															padding: 5px 0 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 12px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														&bull;
+													</td>
+													<td
+														valign="top"
+														align="left"
+														style="
+															padding: 5px 0 0 0;
+															margin: 0;
+															border: none;
+															line-height: 1.3;
+															font-size: 12px;
+															font-family: Arial, Helvetica,
+																sans-serif !important;
+														"
+													>
+														Sử dụng cho các giao dịch mua bán
+														hàng hóa hoặc cung ứng dịch vụ
+														không hợp pháp theo quy định của
+														Ngân hàng Nhà nước Việt Nam
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<!-- Footer -->
+					<footer>
+						<table
+							width="100%"
+							cellpadding="0"
+							cellspacing="0"
+							class="footer-container"
+						>
+							<tr>
+								<td class="footer-container-main">
+									<table
+										role="presentation"
+										width="100%"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<!-- Cột trái (footer-1) -->
+											<td
+												width="45%"
+												valign="top"
+												align="right"
+												style="padding: 0px 25px 0px 0"
+												class="stack-column-top"
+											>
+												<div style="margin-bottom: 5px">
+													Click
+													<strong>
+														<a
+															href="#"
+															target="_blank"
+															style="
+																color: #db0011;
+																text-decoration: none;
+															"
+														>
+															hsbc.com.vn
+														</a>
+													</strong>
+												</div>
+												<div>
+													<img
+														src="image/chs_facebook_logo.png"
+														width="12"
+														height="12"
+														alt="facebook"
+														style="vertical-align: middle"
+													/>
+													<a
+														href="#"
+														target="_blank"
+														class="footer-social"
+														title="Liên kết này có thể cho Quý khách truy cập đến trang web khác không phải của HSBC..."
+														style="
+															padding-left: 5px;
+															vertical-align: middle;
+															color: #252525;
+															text-decoration: none;
+															font-size: 12px;
+														"
+													>
+														www.facebook.com/HSBCVietnam
+													</a>
+												</div>
+											</td>
+
+											<!-- Border ngăn cách -->
+											<td
+												class="hide-on-mobile"
+												style="
+													border-left: 3px solid #db0011;
+													padding: 0;
+													margin: 0;
+												"
+											></td>
+
+											<!-- Cột phải (footer-2) -->
+											<td
+												width="53%"
+												valign="top"
+												align="left"
+												style="padding: 0px 0 0px 10px"
+												class="stack-column-bottom"
+											>
+												<div style="margin-bottom: 5px">
+													Call
+													<strong>
+														<a
+															href="#"
+															target="_blank"
+															style="
+																color: #db0011;
+																text-decoration: none;
+																padding-left: 5px;
+															"
+														>
+															(84 28) 37 247 247
+														</a>
+													</strong>
+													(the South)
+												</div>
+												<div>
+													Or
+													<strong>
+														<a
+															href="#"
+															target="_blank"
+															style="
+																color: #db0011;
+																text-decoration: none;
+																padding-left: 5px;
+															"
+														>
+															(84 24) 62 707 707
+														</a>
+													</strong>
+													(the North)
+												</div>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+
+						<table
+							width="100%"
+							border="0"
+							cellpadding="0"
+							cellspacing="0"
+							class="footer_container"
+							style="
+								margin: 0;
+								border: none;
+								font-family: Arial, Helvetica, sans-serif !important;
+								font-size: 16px;
+								line-height: 1.3;
+								color: #000000;
+								background-color: rgb(245, 245, 245);
+							"
+						>
+							<tr>
+								<td>
+									<table
+										width="100%"
+										border="0"
+										cellpadding="0"
+										cellspacing="0"
+									>
+										<tr>
+											<td
+												align="left"
+												class="content_text_footer"
+												style="padding: 0"
+											>
+												Important information:
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												This material is designed for use in
+												Vietnam. The products and services
+												represented within this material are
+												intended for Vietnam customers. If you are
+												outside of Vietnam, we may not be
+												authorized to offer or provide you with
+												the products and services available
+												through this material in the country or
+												region you are located or resident in.
+												This material is not intended for
+												distribution or use by any person in any
+												jurisdiction, country or region where the
+												distribution or use of this material is
+												restricted and would not be permitted by
+												law or regulation.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												This material provided by HSBC Bank
+												Vietnam (Ltd) ('HSBC Vietnam'). HSBC
+												Vietnam is authorized and regulated in
+												Vietnam by State Bank of Vietnam.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												You are receiving this e-mail because you
+												have consented to HSBC Bank (Vietnam) Ltd.
+												('we', 'us' or 'our') sending you
+												promotional materials/ information
+												regarding our products and services. You
+												may, at any time, choose not to receive
+												e-mail marketing literature / information
+												about our service.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												You can unsubscribe by calling our contact
+												center or visiting one of our branches.
+												Otherwise, you can also unsubscribe
+												digitally by sending an email (regardless
+												of title and content) to
+												<span>unsubscribe</span
+												><span style="display: none">@</span
+												>@<span>hsbc</span>.<span>com</span>.<span
+													>vn</span
+												>
+												from the e-mail address you no longer wish
+												to receive promotional emails from HSBC
+												Bank (Vietnam) Ltd. Please note that your
+												request will be recorded as soon as HSBC
+												Bank receives your request. The
+												unsubscription will take effect after at
+												least 4 working days. However, we
+												recommend that you remain subscribed to
+												our email in order to stay updated of our
+												latest products, services, and privileged
+												promotion offers.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												This e-mail is confidential. It may also
+												be legally privileged. If you are not the
+												addressee you may not copy, forward,
+												disclose or use any part of it. If you
+												have received this message in error,
+												please delete it and all copies from your
+												system.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												Please do not reply to this e-mail. Please
+												contact our HSBC Contact Center.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												We maintain strict security standards and
+												procedures to prevent unauthorised access
+												to information about you. HSBC will never
+												contact you by e-mail or otherwise to ask
+												you to validate personal information such
+												as your user ID, password, or account/
+												credit card numbers. If you receive such a
+												request, please call our Contact Center.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												We also remind our customers to connect
+												only to our HSBC website when accessing
+												Internet Banking. Never follow a link
+												within an e mail to start an Internet
+												Banking session. Instead, key in directly
+												to the browser address bar our HSBC
+												website to access our secured Internet
+												Banking site.
+											</td>
+										</tr>
+										<tr>
+											<td align="left" class="content_text_footer">
+												© Copyright. HSBC Bank (Vietnam) Ltd. All
+												rights reserved.
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</footer>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
